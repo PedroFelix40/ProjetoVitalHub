@@ -6,19 +6,26 @@ import { LogoStyle } from "../../components/Logo/Style"
 import { Title } from "../../components/Title/Style"
 import { InputStyle } from "../../components/Input/Style"
 
+// Import da Image
+import logo from "../../../assets/logo.png"
+
 
 
 export const Login = () => {
     return(
         <Container>
             
-            {/* <LogoStyle source={require('../../assets/logo.png')} /> */}
+             <LogoStyle source={logo} /> 
 
             <Title>Entrar ou criar conta</Title>
 
-            <InputStyle/>
+            <InputStyle
+                placeholder="Usuário ou email"
+            />
             
-            <Input/>
+            <InputStyle
+                placeholder="Senha"
+            />
 
             {/* <LinkMedium>Esqueceu sua senha?</LinkMedium>
 
