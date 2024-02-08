@@ -12,5 +12,6 @@ export const LinkMedium = styled.Text`
 
 export const LinkMediumAccount = styled(LinkMedium)`
     margin-top: 30px;
-    margin-left: 0px
+    margin-left: 0px;
+    color: #4d659d
 `

@@ -1,12 +1,38 @@
 import { Button, View } from "react-native"
 
-export const Navegacao = ({navigation}) => {
-    return(
+export const Navegacao = ({ navigation }) => {
+    return (
         <View>
             <Button
                 title="Login"
                 onPress={() => navigation.navigate("Login")}
             />
+
+            <Button
+                title="Recuperar Senha"
+                onPress={() => navigation.navigate("RecuperarSenha")}
+            />
+
+            <Button
+                title="Verificar Email"
+                onPress={() => navigation.navigate("VerificarEmail")}
+            />
+
+            <Button
+                title="Redifinir Senha"
+                onPress={() => navigation.navigate("RedifinirSenha")}
+            />
+
+            <Button
+                title="Criar Conta"
+                onPress={() => navigation.navigate("CriarConta")}
+            />
+
+            <Button
+                title="Perfil"
+                onPress={() => navigation.navigate("Perfil")}
+            />
+
         </View>
     )
 }

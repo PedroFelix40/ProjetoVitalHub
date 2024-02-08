@@ -18,7 +18,14 @@ import {
   MontserratAlternates_700Bold,
 
 } from '@expo-google-fonts/montserrat-alternates';
+
+// Import dos components
 import { Login } from './src/screens/Login/Login';
+import { RecuperarSenha } from './src/screens/RecuperarSenha/RecuperarSenha';
+import { CriarConta } from './src/screens/CriarConta/CriarConta';
+import { VerificarEmail } from './src/screens/VerificarEmail/VerificarEmail';
+import { RedifinirSenha } from './src/screens/RedifinirSenha/RedifinirSenha';
+import { Perfil } from './src/screens/Perfil/Perfil';
 
 const Stack = createNativeStackNavigator();
 
@@ -57,6 +64,36 @@ export default function App() {
           name="Login"
           component={Login}
           options={{ title: "Login" }}
+        />
+
+        <Stack.Screen
+          name="RecuperarSenha"
+          component={RecuperarSenha}
+          options={{ title: "Recuperar Senha" }}
+        />
+
+        <Stack.Screen
+          name="CriarConta"
+          component={CriarConta}
+          options={{ title: "Criar Conta" }}
+        />
+        
+        <Stack.Screen
+          name="VerificarEmail"
+          component={VerificarEmail}
+          options={{ title: "Verificar Email" }}
+        />
+        
+        <Stack.Screen
+          name="RedifinirSenha"
+          component={RedifinirSenha}
+          options={{ title: "Redifinir Senha" }}
+        />
+        
+        <Stack.Screen
+          name="Perfil"
+          component={Perfil}
+          options={{ title: "Perfil" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

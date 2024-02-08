@@ -15,3 +15,8 @@ export const InputStyle = styled.TextInput`
     color: #34898f;
 `
 
+export const InputDados = styled(InputStyle)`
+
+`
+
+
