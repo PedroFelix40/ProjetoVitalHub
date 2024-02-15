@@ -1,4 +1,4 @@
-import { InputStyle } from "./style"
+import { InputDados } from "./style"
 
 export const InputText = ({
     placeholder,
@@ -8,7 +8,7 @@ export const InputText = ({
     maxLength
 }) => {
     return (
-        <InputStyle
+        <InputDados
             placeholder={placeholder}
             keyBoardType={keyType}
             maxLength={maxLength}

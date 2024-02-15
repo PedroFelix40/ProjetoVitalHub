@@ -1,14 +1,14 @@
 // Import dos componentes
-import { BoxInput, Container, Scroll } from "../../components/Container/style"
+import { Container, ContainerBox, ContainerPerfil, Scroll } from "../../components/Container/style"
 import { FotoStyle } from "../../components/FotoPerfil/style"
 
 // Import da foto
 import fotoPerfil from '../../../assets/FotoPerfil.png'
 import { Title } from "../../components/Title/style"
 import { Subtitle } from "../../components/Text/style"
-import { InputLabel } from "../../components/Label/style"
-import { InputDados } from "../../components/Input/style"
-import { InputText } from "../../components/Input"
+import { BoxInput } from "../../components/BoxInput"
+import { Button } from "../../components/Button/style"
+import { ButtonTitle } from "../../components/ButtonTitle/style"
 
 export const Perfil = () => {
     return (
@@ -19,28 +19,46 @@ export const Perfil = () => {
                 <Title>Richard Kosta</Title>
                 <Subtitle>richard.kosta@gmail.com</Subtitle>
 
-                <BoxInput>
-                    <InputLabel>Data de nascimento:</InputLabel>
-                    <InputDados/>
-
-                    <InputLabel>CPF</InputLabel>
-                    <InputDados />
-
-                    <InputLabel>Endereço</InputLabel>
-                    <InputDados 
-                        
+                <ContainerPerfil>
+                    <BoxInput
+                        textLabel='Data de nascimento'
+                        placeholder='Data de nascimento...'
+                        fieldValue='25/02/2004'
                     />
-
-                    <InputLabel>Cep</InputLabel>
-                    <InputDados 
-                        
+                    <BoxInput
+                        textLabel='CPF'
+                        placeholder='CPF...'
+                        fieldValue='033.420.009.78'
                     />
-
-                    <InputLabel>Cidade</InputLabel>
-                    <InputText 
-                        fieldWidth={40}
+                    <BoxInput
+                        textLabel='Endereço'
+                        placeholder='Endereço...'
+                        fieldValue='Rua Lageado'
                     />
-                </BoxInput>
+                    <ContainerBox>
+                        <BoxInput
+                            fieldWidth={45}
+                            textLabel='CEP'
+                            placeholder='CEP...'
+                            fieldValue='08573710'
+                        />
+
+                        <BoxInput
+                            fieldWidth={50}
+                            textLabel='Cidade'
+                            placeholder='Cidade...'
+                            fieldValue='Itaquaquecetuba'
+                        />
+                    </ContainerBox>
+
+                    <Button>
+                        <ButtonTitle>cadastrar</ButtonTitle>
+                    </Button>
+                    
+                    <Button>
+                        <ButtonTitle>editar</ButtonTitle>
+                    </Button>
+                </ContainerPerfil>
             </Container>
         </Scroll>
     )

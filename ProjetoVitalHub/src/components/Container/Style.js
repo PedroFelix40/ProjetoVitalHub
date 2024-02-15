@@ -18,3 +18,14 @@ export const BoxInput = styled.View`
     width: 90%;
     align-items: flex-start;
 `
+
+export const ContainerBox = styled.View`
+    flex-direction: row;
+`
+
+export const ContainerPerfil = styled.View`
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+`

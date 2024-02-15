@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const InputLabel = styled.Text`
-    text-align: left;
+ padding-left: 5%;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Quicksand_600SemiBold';
     color: #33303E;
 `
