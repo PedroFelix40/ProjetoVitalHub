@@ -1,22 +1,57 @@
 import styled from "styled-components";
 
+import {LinearGradient} from "expo-linear-gradient"
+
+export const CntHeader = styled(LinearGradient).attrs({
+    color: ["#60BFC5", "#496BBA"],
+    start: {x: -0.05, y: 1.00},
+    end: {x: 1, y: 0}
+})`
+    width: 100%;
+`
+
+
 export const HeaderContainer = styled.View`
-    background-color: #FECC2B;
+    background-color: #60BFC5;
     height: 20%;
     align-items: center;
     justify-content: center;
+    
     border-radius: 0px 0px 15px 15px;
-
-    /* Shadow */
-    box-shadow: 0px 0px 10px #00000030;
+    width: 100%;
 `
 export const HeaderContent = styled.SafeAreaView`
     margin-top: 30px;
+    flex-direction: row;
+    width: 90%;
+
+    margin-bottom: 20px;
+
+    justify-content: space-between;
+
+    align-items: center;
 `
 
+export const ContainerTxtHeader = styled.View`
+    /* align-items: center; */
+    justify-content: center;
+`
+
+export const BoxHeader = styled.View`
+        flex-direction: row;
+        gap: 10px;
+`
+
+
 export const TextHeader = styled.Text`
-    font-size: 24px;
-    font-family: 'Roboto_500Medium';
-    color: #333E33;
+    font-size: 14px;
+    font-family: 'Quicksand_500Medium';
+    color: #4E4B59;
+    
+`
+export const TextName = styled(TextHeader)`
+    font-size: 16px;
+    font-family: 'MontserratAlternates_600SemiBold';
+    color: #FBFBFB;
     
 `
