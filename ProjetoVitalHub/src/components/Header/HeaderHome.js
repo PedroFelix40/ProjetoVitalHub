@@ -5,8 +5,9 @@ import sino from "../../../assets/iconeSino.png"
 
 export function HeaderHome() {
     return (
-        
-             <HeaderContainer>
+        <CntHeader>
+            
+             {/* <HeaderContainer> */}
                 <HeaderContent>
                     <BoxHeader>
                         <FotoPerfilHome source={fotoPerfilHome} />
@@ -18,7 +19,8 @@ export function HeaderHome() {
                     </BoxHeader>
                     <IconeSino source={sino} />
                 </HeaderContent>
-            </HeaderContainer> 
+            {/* </HeaderContainer>  */}
+        </CntHeader>
         
     )
 }

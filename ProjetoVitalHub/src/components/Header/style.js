@@ -1,13 +1,19 @@
 import styled from "styled-components";
 
-import {LinearGradient} from "expo-linear-gradient"
+import { LinearGradient } from "expo-linear-gradient"; 
 
 export const CntHeader = styled(LinearGradient).attrs({
-    color: ["#60BFC5", "#496BBA"],
+    colors: ["#60BFC5", "#496BBA"],
     start: {x: -0.05, y: 1.00},
     end: {x: 1, y: 0}
 })`
     width: 100%;
+    height: 102px;
+
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 0px 0px 15px 15px;
 `
 
 

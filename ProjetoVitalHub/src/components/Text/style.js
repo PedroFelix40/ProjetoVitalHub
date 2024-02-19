@@ -25,3 +25,15 @@ export const LinkUtil = styled.Text`
     text-decoration: underline;
 `
 
+export const Age = styled.Text`
+    font-size: 14px;
+    color: #8C8A97;
+    font-family: "Quicksand_400Regular";
+`
+export const TypeConsulta = styled(Age)`
+    font-size: 14px;
+    font-family: "Quicksand_600SemiBold";
+`
+
+
+

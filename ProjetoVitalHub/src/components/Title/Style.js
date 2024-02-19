@@ -6,3 +6,7 @@ export const Title = styled.Text`
     color: #33303e;
     margin-bottom: 5px;
 `
+export const TitleName = styled(Title)`
+    font-size: 16px;
+    margin-bottom: 0px;
+`

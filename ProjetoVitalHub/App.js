@@ -8,6 +8,7 @@ import { Navegacao } from './src/screens/Navegacao/Navegacao';
 // Import das fonts
 import { useFonts } from 'expo-font';
 import {
+  Quicksand_400Regular,
   Quicksand_500Medium,
   Quicksand_600SemiBold,
 
@@ -33,6 +34,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
 
   const [fontsLoaded, fontError] = useFonts({
+    Quicksand_400Regular,
     Quicksand_500Medium,
     Quicksand_600SemiBold,
     MontserratAlternates_500Medium,
