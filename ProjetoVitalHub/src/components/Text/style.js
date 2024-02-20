@@ -25,14 +25,15 @@ export const LinkUtil = styled.Text`
     text-decoration: underline;
 `
 
-export const Age = styled.Text`
+export const TextAge = styled.Text`
     font-size: 14px;
     color: #8C8A97;
     font-family: "Quicksand_400Regular";
 `
-export const TypeConsulta = styled(Age)`
+export const TypeBold = styled(TextAge)`
     font-size: 14px;
     font-family: "Quicksand_600SemiBold";
+    color: ${(props) => props.situacao == "pendente" ? "#49b3ba" : '#8c8a97'};
 `
 
 

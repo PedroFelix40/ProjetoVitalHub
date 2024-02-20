@@ -19,5 +19,7 @@ export const IconeSino = styled(FotoPerfilHome)`
 export const ImageUser = styled(FotoStyle)`
     width: 77px;
     height: 80px;
+
+    border-radius: 5px;
     margin: 0;
 `
