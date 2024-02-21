@@ -10,5 +10,11 @@ export const ButtonTitle = styled.Text`
 
 export const ButtonTitleGoogle = styled(ButtonTitle)`
     color: #496BBA;
-    
+`
+
+export const ButtonSecondaryTitle = styled.Text`
+    color: #344F8F;
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: 'MontserratAlternates_600SemiBold';
 `

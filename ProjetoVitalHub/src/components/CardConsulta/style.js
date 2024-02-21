@@ -47,7 +47,7 @@ export const ViewRow = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 `;
 
 export const ClockCard = styled.View`

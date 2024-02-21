@@ -8,6 +8,7 @@ import { TextAge, TypeBold } from "../Text/style";
 import { AntDesign } from '@expo/vector-icons';
 
 export const CardConsulta = ({
+    data = [],
     situacao = 'pendente',
     onPressCancel,
     onPressAppointment
@@ -21,7 +22,7 @@ export const CardConsulta = ({
             <ContentCard>
                 {/* Conteúdo do card */}
                 <BoxInfos>
-                    <TitleName>Niccole Sarga</TitleName>
+                    <TitleName>{data.nome}</TitleName>
 
                     <AgeAndTypeBox>
                         <TextAge>22 anos</TextAge>
@@ -44,11 +45,11 @@ export const CardConsulta = ({
                             <>
                             </>
                         ) : situacao == "pendente" ? (
-                            <ButtonCard>
+                            <ButtonCard onPress={onPressCancel}>
                                 <ButtonText situacao={situacao}>Cancelar</ButtonText>
                             </ButtonCard>
                         ) : (
-                            <ButtonCard>
+                            <ButtonCard onPress={onPressAppointment}>
                                 <ButtonText situacao={situacao}>Ver prontuário</ButtonText>
                             </ButtonCard>
                         )

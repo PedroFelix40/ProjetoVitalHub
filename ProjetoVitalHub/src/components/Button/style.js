@@ -20,3 +20,13 @@ export const ButtonGoogle = styled(Button)`
     margin-top: 15px;
     gap: 27px;
 `
+
+export const ButtonModal = styled(Button)`
+    width: 80%;
+    margin-top: 25px;
+`
+
+export const ButtonSecondary = styled(Button)`
+    background-color: transparent;
+    border: none;
+`

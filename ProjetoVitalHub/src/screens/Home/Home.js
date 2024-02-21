@@ -6,17 +6,26 @@ import { HeaderHome } from "../../components/Header/HeaderHome"
 import { FilterAppointment } from "./style"
 import { CardConsulta } from "../../components/CardConsulta/CardConsulta"
 import { ListComponent } from "../../components/List/List"
+import { CancellationModal } from "../../components/CancellationModal/CancellationModal"
+import { AppointmentModal } from "../../components/AppointmentModal/AppointmentModal"
 
 const Consultas = [
     { id: 1, nome: "Carlos", situacao: "pendente" },
     { id: 2, nome: "Pedro", situacao: "realizado" },
     { id: 3, nome: "Muriilo", situacao: "cancelado" },
-    { id: 4, nome: "Pedro", situacao: "realizado" },
+    { id: 4, nome: "Felix", situacao: "realizado" },
     { id: 5, nome: "Garbs", situacao: "cancelado" },
 ]
 
 export const Home = () => {
-    const [statusLista, setStatusList] = useState("pendente")
+
+    // State para o estado da lista(cards)
+    const [statusLista, setStatusList] = useState("pendente");
+    
+    // state para exibição dos modais
+    const [ showModalCancel, setShowModalCancel] = useState(false)
+    const [ showModalAppointment, setShowModalAppointment] = useState(false)
+
     return (
         <Container>
             <HeaderHome />
@@ -59,12 +68,27 @@ export const Home = () => {
                 renderItem={( {item} ) =>
                     statusLista == item.situacao && (
                         <CardConsulta 
+                            data={item}
                             situacao={item.situacao}
+                            onPressCancel={() => setShowModalCancel(true)}
+                            onPressAppointment={() => setShowModalAppointment(true)}
                         />
                     )
-                    // <CardConsulta/>
 
                 }
+                showsVerticalScrollIndicator={false}
+            />
+            {/* modal cancelar */}
+            <CancellationModal
+                visible={showModalCancel}
+                setShowModalCancel={setShowModalCancel}
+            />
+
+            {/* modal ver protuário */}
+            <AppointmentModal
+                visible={showModalAppointment}
+                setShowModalAppointment={setShowModalAppointment}
+                dados={Consultas}
             />
 
         </Container>
