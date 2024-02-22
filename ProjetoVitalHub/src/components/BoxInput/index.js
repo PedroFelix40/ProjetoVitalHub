@@ -5,7 +5,10 @@ import { FieldContent } from "./style"
 
 export const BoxInput = ({
     fieldWidth = 100,
+    fieldHeight = 50,
     editable = false,
+    fieldBorderColor,
+    fieldColor,
     textLabel,
     placeholder,
     fieldValue = null,
@@ -13,13 +16,16 @@ export const BoxInput = ({
     keyType = 'default',
     maxLength
 }) => {
-    return(
+    return (
         <FieldContent fieldWidth={fieldWidth}>
             <Label
                 textLabel={textLabel}
             />
 
             <InputText
+                fieldColor={fieldColor}
+                fieldBorderColor={fieldBorderColor}
+                fieldHeight={fieldHeight}
                 editable={editable}
                 placeholder={placeholder}
                 keyType={keyType}

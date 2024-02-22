@@ -28,6 +28,7 @@ import { VerificarEmail } from './src/screens/VerificarEmail/VerificarEmail';
 import { RedifinirSenha } from './src/screens/RedifinirSenha/RedifinirSenha';
 import { Perfil } from './src/screens/Perfil/Perfil';
 import { Home } from './src/screens/Home/Home';
+import { MedicoProntuario } from './src/screens/MedicoProntuario/MedicoProntuario';
 
 const Stack = createNativeStackNavigator();
 
@@ -103,6 +104,12 @@ export default function App() {
           name="Home"
           component={Home}
           options={{ title: "Home" }}
+        />
+        
+        <Stack.Screen
+          name="MedicoProntuario"
+          component={MedicoProntuario}
+          options={{ title: "Medico Prontuario" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
