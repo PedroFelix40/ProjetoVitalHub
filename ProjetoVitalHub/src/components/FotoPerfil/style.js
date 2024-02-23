@@ -23,3 +23,4 @@ export const ImageUser = styled(FotoStyle)`
     border-radius: 5px;
     margin: 0;
 `
+

@@ -4,8 +4,11 @@ import { Title } from "../Title/style"
 import fotoPerfil from '../../../assets/FotoPerfil.png'
 import { ButtonModal, ButtonSecondary } from "../Button/style"
 import { ButtonSecondaryTitle, ButtonTitle } from "../ButtonTitle/style"
-import { AppointmentContent, AppointmentModalStyle, ImagePatient } from "./style"
+import { AppointmentContent, AppointmentModalStyle, BoxConsultasInput, ConsultasContent, ImagePatient } from "./style"
 import { Subtitle } from "../Text/style"
+import { BoxInput } from "../BoxInput"
+import { BntListConsulta, BtnListAppointment } from "../BtnListAppointment/BtnListAppointment"
+
 
 export const AppointmentModal = ({
     visible,
@@ -31,6 +34,52 @@ export const AppointmentModal = ({
                         <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                     </ButtonSecondary>
                 </AppointmentContent>
+            </AppointmentModalStyle>
+        </Modal>
+    )
+}
+
+export const ModalConsultas = ({
+    visible,
+    setShowModalConsultas
+}) => {
+    return (
+        <Modal visible={visible} transparent={true} animationType="fade">
+            <AppointmentModalStyle>
+                <ConsultasContent>
+                    
+                    <BoxConsultasInput>
+                    
+                    <BntListConsulta
+                        textButton={"Rotina"}
+                        fieldBorderColor="#60BFC5"
+                    />
+                    
+                    <BntListConsulta
+                        textButton={"Exame"}
+                        fieldBorderColor="#60BFC5"
+                    />
+                    
+                    <BntListConsulta
+                        textButton={"Urgência"}
+                        fieldBorderColor="#60BFC5"
+                    />
+                   
+                    </BoxConsultasInput>
+
+                    <BoxInput
+                        fieldColor={"#34898F"}
+                        fieldBorderColor={"#49B3BA"}
+                        fieldHeight={53}
+                        textLabel='Descrição da consulta'
+                        placeholder='Descrição'
+                    />
+
+                    <ButtonSecondary onPress={() => setShowModalConsultas(false)}>
+                        <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
+                    </ButtonSecondary>
+
+                </ConsultasContent>
             </AppointmentModalStyle>
         </Modal>
     )

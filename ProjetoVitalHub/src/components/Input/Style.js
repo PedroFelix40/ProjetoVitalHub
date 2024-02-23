@@ -13,8 +13,8 @@ export const InputStyle = styled.TextInput`
 
     font-size: 14px;
     font-family: 'MontserratAlternates_600SemiBold';
-    /* color: #34898f; */
-    color: ${props => `${props.fieldColor}`};
+    color: #34898f;
+    /* color: ${props => `${props.fieldColor}`}; */
 
 `
 

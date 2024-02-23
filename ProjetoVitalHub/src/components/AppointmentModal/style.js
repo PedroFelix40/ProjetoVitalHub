@@ -22,3 +22,13 @@ export const ImagePatient = styled.Image`
     border-radius: 10px;
 `
 
+export const ConsultasContent = styled(AppointmentContent)`
+    width: 100%;
+`
+
+export const BoxConsultasInput = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    width: 92%;
+`
+

@@ -3,11 +3,14 @@ import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListA
 import { Calendarhome } from "../../components/CalendarHome/CalendarHome"
 import { Container } from "../../components/Container/style"
 import { HeaderHome } from "../../components/Header/HeaderHome"
-import { FilterAppointment } from "./style"
+import { ButtonTesttt, FilterAppointment, IconeAppointment } from "./style"
 import { CardConsulta } from "../../components/CardConsulta/CardConsulta"
 import { ListComponent } from "../../components/List/List"
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal"
-import { AppointmentModal } from "../../components/AppointmentModal/AppointmentModal"
+import { AppointmentModal, ModalConsultas } from "../../components/AppointmentModal/AppointmentModal"
+
+import { FotoPerfilHome } from "../../components/FotoPerfil/style"
+import { ButtonAppointment } from "../../components/ButtonAppointment"
 
 const Consultas = [
     { id: 1, nome: "Carlos", situacao: "pendente" },
@@ -21,13 +24,20 @@ export const Home = () => {
 
     // State para o estado da lista(cards)
     const [statusLista, setStatusList] = useState("pendente");
-    
+
     // state para exibição dos modais
-    const [ showModalCancel, setShowModalCancel] = useState(false)
-    const [ showModalAppointment, setShowModalAppointment] = useState(false)
+    const [showModalCancel, setShowModalCancel] = useState(false)
+    const [showModalAppointment, setShowModalAppointment] = useState(false)
+    const [showModalConsultas, setShowModalConsultas] = useState(false)
 
     return (
         <Container>
+            {/* MUDAR O BACKGROUND COLOR
+             */}
+            <ButtonAppointment
+                onPressConsulta={() => setShowModalConsultas(true)}
+            />
+
             <HeaderHome />
 
             {/* Calendario */}
@@ -65,9 +75,9 @@ export const Home = () => {
                 data={Consultas}
                 keyExtractor={(item) => item.id}
 
-                renderItem={( {item} ) =>
+                renderItem={({ item }) =>
                     statusLista == item.situacao && (
-                        <CardConsulta 
+                        <CardConsulta
                             data={item}
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
@@ -90,6 +100,12 @@ export const Home = () => {
                 setShowModalAppointment={setShowModalAppointment}
                 dados={Consultas}
             />
+
+            <ModalConsultas
+                visible={showModalConsultas}
+                setShowModalConsultas={setShowModalConsultas}
+            />
+
 
         </Container>
     )

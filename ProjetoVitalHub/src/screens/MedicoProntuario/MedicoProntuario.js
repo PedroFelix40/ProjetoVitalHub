@@ -1,6 +1,7 @@
 
 import { BoxInput } from "../../components/BoxInput"
-import { Button, ButtonModal, ButtonSecondary } from "../../components/Button/style"
+
+import { Button, ButtonSecondary } from "../../components/Button/style"
 import { ButtonSecondaryTitle, ButtonTitle } from "../../components/ButtonTitle/style"
 import { Container, ContainerPerfil, Scroll } from "../../components/Container/style"
 import { FotoStyle } from "../../components/FotoPerfil/style"
@@ -43,7 +44,7 @@ export const MedicoProntuario = () => {
                         placeholder='Prescrição médica'
                     />
 
-                    <Button >
+                    <Button>
                         <ButtonTitle>Salvar</ButtonTitle>
                     </Button>
 
