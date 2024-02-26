@@ -7,7 +7,7 @@ export const ButtonTabStyle = styled.TouchableHighlight`
     /* Validação botão */
     ${(props) => props.clickButton ? css`
         background-color: #496bba;
-        background-color: ${props => `${props.fieldBckColor}`};
+        /* background-color: ${props => `${props.fieldBckColor}`}; */
     `:
         css`
         background-color: #fbfbfb;

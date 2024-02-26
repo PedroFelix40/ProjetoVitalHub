@@ -26,6 +26,8 @@ export const InputDados = styled(InputStyle)`
     /* border: 2px solid #F5F3F3; */
     border: ${props => `2px solid ${props.fieldBorderColor}`};
 
+    text-align: justify;
+
     margin-bottom: 0px;
 
     font-family: 'MontserratAlternates_500Medium';

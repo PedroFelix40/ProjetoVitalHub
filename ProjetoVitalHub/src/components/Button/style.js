@@ -25,11 +25,18 @@ export const ButtonGoogle = styled(Button)`
 `
 
 export const ButtonModal = styled(Button)`
-    width: 80%;
+    width: 80%;  
+    /* width: ${props => `${props.fieldWidth}%`}; */
     margin-top: 25px;
 `
 
 export const ButtonSecondary = styled(Button)`
     background-color: transparent;
     border: none;
+    margin-top: 30px;
+`
+
+export const ButtonModalStyle = styled(Button)`
+    width: 90%;
+    margin-top: 30px;
 `

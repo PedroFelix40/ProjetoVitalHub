@@ -36,5 +36,13 @@ export const TypeBold = styled(TextAge)`
     color: ${(props) => props.situacao == "pendente" ? "#49b3ba" : '#8c8a97'};
 `
 
+export const TextStyle1 = styled.Text`
+    font-size: 14;
+    font-family: "Quicksand_600SemiBold";
+
+    color: ${props => `${props.fieldColor}`};
+
+`
+
 
 

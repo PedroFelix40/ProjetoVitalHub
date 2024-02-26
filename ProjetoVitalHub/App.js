@@ -29,6 +29,7 @@ import { RedifinirSenha } from './src/screens/RedifinirSenha/RedifinirSenha';
 import { Perfil } from './src/screens/Perfil/Perfil';
 import { Home } from './src/screens/Home/Home';
 import { MedicoProntuario } from './src/screens/MedicoProntuario/MedicoProntuario';
+import { SelectClinic } from './src/screens/SelectClinic/SelectClinic';
 
 const Stack = createNativeStackNavigator();
 
@@ -110,6 +111,12 @@ export default function App() {
           name="MedicoProntuario"
           component={MedicoProntuario}
           options={{ title: "Medico Prontuario" }}
+        />
+        
+        <Stack.Screen
+          name="SelectClinic"
+          component={SelectClinic}
+          options={{ title: "SelectClinic" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

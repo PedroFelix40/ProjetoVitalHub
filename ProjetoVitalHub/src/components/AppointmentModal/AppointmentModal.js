@@ -1,13 +1,14 @@
 import { Modal } from "react-native"
-import { Title } from "../Title/style"
+import { Title, TitleConsulta } from "../Title/style"
 
 import fotoPerfil from '../../../assets/FotoPerfil.png'
-import { ButtonModal, ButtonSecondary } from "../Button/style"
+import { ButtonModal, ButtonModalStyle, ButtonSecondary } from "../Button/style"
 import { ButtonSecondaryTitle, ButtonTitle } from "../ButtonTitle/style"
-import { AppointmentContent, AppointmentModalStyle, BoxConsultasInput, ConsultasContent, ImagePatient } from "./style"
+import { AppointmentContent, AppointmentModalStyle, BoxConsultasInput, ConsultaStyleModal, ConsultasContent, ConsultasModalStyle, ImagePatient } from "./style"
 import { Subtitle } from "../Text/style"
 import { BoxInput } from "../BoxInput"
 import { BntListConsulta, BtnListAppointment } from "../BtnListAppointment/BtnListAppointment"
+import { Label } from "../Label"
 
 
 export const AppointmentModal = ({
@@ -45,26 +46,32 @@ export const ModalConsultas = ({
 }) => {
     return (
         <Modal visible={visible} transparent={true} animationType="fade">
-            <AppointmentModalStyle>
+            <ConsultaStyleModal>
                 <ConsultasContent>
-                    
+
+                    <TitleConsulta>Agendar consulta</TitleConsulta>
+
+
+                    <Label
+                        textLabel={"Qual o nível da consulta"}
+                    />
                     <BoxConsultasInput>
-                    
-                    <BntListConsulta
-                        textButton={"Rotina"}
-                        fieldBorderColor="#60BFC5"
-                    />
-                    
-                    <BntListConsulta
-                        textButton={"Exame"}
-                        fieldBorderColor="#60BFC5"
-                    />
-                    
-                    <BntListConsulta
-                        textButton={"Urgência"}
-                        fieldBorderColor="#60BFC5"
-                    />
-                   
+
+                        <BntListConsulta
+                            textButton={"Rotina"}
+                            fieldBorderColor="#60BFC5"
+                        />
+
+                        <BntListConsulta
+                            textButton={"Exame"}
+                            fieldBorderColor="#60BFC5"
+                        />
+
+                        <BntListConsulta
+                            textButton={"Urgência"}
+                            fieldBorderColor="#60BFC5"
+                        />
+
                     </BoxConsultasInput>
 
                     <BoxInput
@@ -75,12 +82,17 @@ export const ModalConsultas = ({
                         placeholder='Descrição'
                     />
 
+                    <ButtonModalStyle>
+                        <ButtonTitle>Continuar</ButtonTitle>
+                    </ButtonModalStyle>
+
                     <ButtonSecondary onPress={() => setShowModalConsultas(false)}>
                         <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                     </ButtonSecondary>
 
                 </ConsultasContent>
-            </AppointmentModalStyle>
+            </ConsultaStyleModal>
         </Modal>
     )
 }
+

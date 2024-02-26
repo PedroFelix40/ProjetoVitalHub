@@ -8,6 +8,10 @@ export const AppointmentModalStyle = styled.View`
     background-color: rgba(0, 0, 0, 0.60);
 `
 
+export const ConsultaStyleModal = styled(AppointmentModalStyle)`
+    justify-content: flex-end;
+`
+
 export const AppointmentContent = styled.View`
     padding: 30px 30px 10px;
     width: 90%;
@@ -24,11 +28,13 @@ export const ImagePatient = styled.Image`
 
 export const ConsultasContent = styled(AppointmentContent)`
     width: 100%;
+    height: 60%;
 `
 
 export const BoxConsultasInput = styled.View`
     flex-direction: row;
     justify-content: space-between;
     width: 92%;
+    margin: 10px 0px 20px;
 `
 

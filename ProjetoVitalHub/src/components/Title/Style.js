@@ -10,3 +10,7 @@ export const TitleName = styled(Title)`
     font-size: 16px;
     margin-bottom: 0px;
 `
+
+export const TitleConsulta = styled(Title)`
+    margin-bottom: 30px;
+`

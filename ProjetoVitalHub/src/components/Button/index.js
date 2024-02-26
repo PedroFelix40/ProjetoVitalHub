@@ -1,7 +1,7 @@
 import { ButtonStyled } from "./style"
 
 export const Button = ({
-    fieldBckColor = "#496bba"
+    fieldBckColor = "#496bba",
 }) => {
     return(
         <ButtonStyled
