@@ -12,5 +12,5 @@ export const TitleName = styled(Title)`
 `
 
 export const TitleConsulta = styled(Title)`
-    margin-bottom: 30px;
+    margin-top: 30px;
 `

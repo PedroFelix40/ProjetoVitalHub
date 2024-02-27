@@ -1,24 +1,28 @@
 import { Modal } from "react-native"
-import { Title, TitleName } from "../../components/Title/style"
+import { Title, TitleConsulta, TitleName } from "../../components/Title/style"
 import { ButtonModalStyle, ButtonSecondary } from "../../components/Button/style"
 import { ButtonSecondaryTitle, ButtonTitle } from "../../components/ButtonTitle/style"
-import { BoxDay, BoxInformacoes, SelectContent, SelectModalStyle, SelectView } from "./style"
-import { TextStyle1 } from "../../components/Text/style"
+import { SelectContent, SelectView } from "./style"
 
 import { Container, ContainerPerfil, Scroll } from "../../components/Container/style"
 import { BoxSelect } from "../../components/BoxSelect"
+import { useState } from "react"
+
 
 export const SelectClinic = () => {
+    const [selectedClinic, setSelectedClinic] = useState(null);
+
     return (
         <Container>
             <SelectContent>
-                <Title>Selecionar clínica</Title>
+                <TitleConsulta>Selecionar clínica</TitleConsulta>
 
                 <SelectView>
                     <BoxSelect/>
                     <BoxSelect/>
                     <BoxSelect/>
                     <BoxSelect/>
+                    
                 </SelectView>
 
                 <ButtonModalStyle>

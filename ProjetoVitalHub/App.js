@@ -118,6 +118,8 @@ export default function App() {
           component={SelectClinic}
           options={{ title: "SelectClinic" }}
         />
+        
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -40,7 +40,7 @@ export const TextStyle1 = styled.Text`
     font-size: 14;
     font-family: "Quicksand_600SemiBold";
 
-    color: ${props => `${props.fieldColor}`};
+    color: ${props => `${props.fieldColor}` };
 
 `
 
