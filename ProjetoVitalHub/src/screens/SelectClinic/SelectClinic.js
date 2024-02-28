@@ -14,26 +14,27 @@ export const SelectClinic = () => {
 
     return (
         <Container>
-            <SelectContent>
-                <TitleConsulta>Selecionar clínica</TitleConsulta>
+            <Scroll>
+                <SelectContent>
+                    <TitleConsulta>Selecionar clínica</TitleConsulta>
 
-                <SelectView>
-                    <BoxSelect/>
-                    <BoxSelect/>
-                    <BoxSelect/>
-                    <BoxSelect/>
-                    
-                </SelectView>
+                    <SelectView>
+                        <BoxSelect />
+                        <BoxSelect />
+                        <BoxSelect />
+                        <BoxSelect />
+                    </SelectView>
 
-                <ButtonModalStyle>
-                    <ButtonTitle>Continuar</ButtonTitle>
-                </ButtonModalStyle>
+                    <ButtonModalStyle>
+                        <ButtonTitle>Continuar</ButtonTitle>
+                    </ButtonModalStyle>
 
-                <ButtonSecondary>
-                    <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
-                </ButtonSecondary>
+                    <ButtonSecondary>
+                        <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
+                    </ButtonSecondary>
 
-            </SelectContent>
+                </SelectContent>
+            </Scroll>
         </Container>
     )
 }

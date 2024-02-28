@@ -3,13 +3,11 @@ import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListA
 import { Calendarhome } from "../../components/CalendarHome/CalendarHome"
 import { Container } from "../../components/Container/style"
 import { HeaderHome } from "../../components/Header/HeaderHome"
-import { ButtonTesttt, FilterAppointment, IconeAppointment } from "./style"
+import { FilterAppointment, IconeAppointment } from "./style"
 import { CardConsulta } from "../../components/CardConsulta/CardConsulta"
 import { ListComponent } from "../../components/List/List"
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal"
 import { AppointmentModal, ModalConsultas } from "../../components/AppointmentModal/AppointmentModal"
-
-import { FotoPerfilHome } from "../../components/FotoPerfil/style"
 import { ButtonAppointment } from "../../components/ButtonAppointment"
 
 const Consultas = [
@@ -70,7 +68,6 @@ export const Home = () => {
             {/* Cards */}
             {/* <CardConsulta/> */}
 
-
             <ListComponent
                 data={Consultas}
                 keyExtractor={(item) => item.id}
@@ -105,7 +102,8 @@ export const Home = () => {
                 visible={showModalConsultas}
                 setShowModalConsultas={setShowModalConsultas}
             />
-
+            
+            
 
         </Container>
     )

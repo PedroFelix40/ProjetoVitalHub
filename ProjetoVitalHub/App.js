@@ -30,6 +30,10 @@ import { Perfil } from './src/screens/Perfil/Perfil';
 import { Home } from './src/screens/Home/Home';
 import { MedicoProntuario } from './src/screens/MedicoProntuario/MedicoProntuario';
 import { SelectClinic } from './src/screens/SelectClinic/SelectClinic';
+import { SelectMedicoScreen } from './src/screens/SelectMedicoScreen/SelectMedicoScreen';
+import { SelectDate } from './src/screens/SelectDate/SelectDate';
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -119,6 +123,18 @@ export default function App() {
           options={{ title: "SelectClinic" }}
         />
         
+        
+        <Stack.Screen
+          name="SelectMedicoScreen"
+          component={SelectMedicoScreen}
+          options={{ title: "SelectMedicoScreen" }}
+        /> 
+        
+        <Stack.Screen
+          name="SelectDate"
+          component={SelectDate}
+          options={{ title: "SelectDate" }}
+        />
         
       </Stack.Navigator>
     </NavigationContainer>

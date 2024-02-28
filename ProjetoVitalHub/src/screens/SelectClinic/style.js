@@ -1,25 +1,16 @@
 import styled from "styled-components";
 
 export const SelectContent = styled.View`
-    /* justify-content: center; */
     align-items: center;
-
     width: 100%; 
-
-    /* border: 2px solid blue; */
-
+    height: max-content;
 `
 
 export const SelectView = styled.View`
     width: 100%; 
-    height: max-content;
-
-    gap: 12px;
-
     align-items: center;
-    /* justify-content: space-between; */
-
-    margin-top: 35px; 
+    margin-top: 35px;
+    gap : 15px;
 `
 
 export const BoxSelectStyle = styled.TouchableOpacity`
@@ -27,15 +18,12 @@ export const BoxSelectStyle = styled.TouchableOpacity`
     height: 84px;
 
     border-radius: 5px;
-    /* border: 2px solid blue; */
-    margin: 15px 0px;
     background-color: white;
 
     justify-content: space-around;
     padding: 10px;
 
-    box-shadow: 0 4px 4px #000;
-    /* box-shadow: 10px 10px 5px rgb( 0, 0, 0); */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
 
     ${(props) =>
     props.clickButton &&
@@ -44,7 +32,7 @@ export const BoxSelectStyle = styled.TouchableOpacity`
     `}  
 
     shadow-color: gray;
-     shadow-opacity: 0.5;
+    shadow-opacity: 0.5;
     shadow-offset: 5px 5px;
     shadow-radius: 5px;
     elevation: 10;

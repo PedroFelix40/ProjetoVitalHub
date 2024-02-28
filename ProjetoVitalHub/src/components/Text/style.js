@@ -9,7 +9,7 @@ export const TextAccount = styled.Text`
 
 export const Subtitle = styled.Text`
     font-size: 16px;
-    width: 90%;
+    /* width: 90%; */
     font-family: 'Quicksand_500Medium';
     color: #5F5C6B;
     text-align: center;
