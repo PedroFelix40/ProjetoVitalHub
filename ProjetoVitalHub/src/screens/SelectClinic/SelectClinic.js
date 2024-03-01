@@ -9,7 +9,9 @@ import { BoxSelect } from "../../components/BoxSelect"
 import { useState } from "react"
 
 
-export const SelectClinic = () => {
+export const SelectClinic = ({
+    navigation
+}) => {
     const [selectedClinic, setSelectedClinic] = useState(null);
 
     return (
@@ -25,7 +27,7 @@ export const SelectClinic = () => {
                         <BoxSelect />
                     </SelectView>
 
-                    <ButtonModalStyle>
+                    <ButtonModalStyle onPress={() => navigation.navigate("SelectMedicoScreen")}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </ButtonModalStyle>
 

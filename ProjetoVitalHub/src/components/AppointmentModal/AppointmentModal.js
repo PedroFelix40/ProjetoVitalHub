@@ -42,7 +42,8 @@ export const AppointmentModal = ({
 
 export const ModalConsultas = ({
     visible,
-    setShowModalConsultas
+    setShowModalConsultas,
+    navigation
 }) => {
     return (
         <Modal visible={visible} transparent={true} animationType="fade">
@@ -82,7 +83,7 @@ export const ModalConsultas = ({
                         placeholder='Descrição'
                     />
 
-                    <ButtonModalStyle>
+                    <ButtonModalStyle onPress={() => navigation.navigate("SelectClinic") || setShowModalConsultas(false)}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </ButtonModalStyle>
 
@@ -92,6 +93,35 @@ export const ModalConsultas = ({
 
                 </ConsultasContent>
             </ConsultaStyleModal>
+        </Modal>
+    )
+}
+
+export const ModalAgendarConsulta = ({
+    visible,
+    setShowModalAgendar,
+}) => {
+    return (
+        <Modal visible={visible} transparent={true} animationType="fade">
+            {/* Container */}
+            <AppointmentModalStyle>
+
+                <AppointmentContent>
+                    {/* <ImagePatient source={fotoPerfil} /> */}
+
+                    <Title>Pedro</Title> 
+
+                    <Subtitle>22 anos * niccole@gmail.com</Subtitle>
+
+                    <ButtonModalStyle>
+                        <ButtonTitle>Confirmar</ButtonTitle>
+                    </ButtonModalStyle>
+
+                    <ButtonSecondary onPress={() => setShowModalAgendar(false)}>
+                        <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
+                    </ButtonSecondary>
+                </AppointmentContent>
+            </AppointmentModalStyle>
         </Modal>
     )
 }

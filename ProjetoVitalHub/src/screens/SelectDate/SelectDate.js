@@ -9,8 +9,13 @@ import { ContentSelect } from "../SelectMedicoScreen/style"
 import InputSelect from "../../components/InputSelect"
 import { InputLabel } from "../../components/Label/style"
 import { LabelDate } from "./style"
+import { ButtonModalConfirmar } from "../../components/Button"
+import { useState } from "react"
+import { ModalAgendarConsulta } from "../../components/AppointmentModal/AppointmentModal"
 
 export const SelectDate = () => {
+    const [showModalAgendar, setShowModalAgendar] = useState(false)
+
     return (
         <Container>
             <Scroll>
@@ -22,14 +27,19 @@ export const SelectDate = () => {
                     <LabelDate>Selecione um horário disponível</LabelDate>
                    <InputSelect/>
 
-                    <ButtonModalStyle>
-                        <ButtonTitle>Continuar</ButtonTitle>
-                    </ButtonModalStyle>
+                    <ButtonModalConfirmar
+                        textValue={"Confirmar"}
+                        onPressConfirmar={() => setShowModalAgendar(true)}
+                    />
 
                     <ButtonSecondary>
                         <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                     </ButtonSecondary>
 
+                    <ModalAgendarConsulta
+                        visible={showModalAgendar}
+                        setShowModalAgendar={setShowModalAgendar}
+                    />
                 </ContentSelect>
             </Scroll>
         </Container>

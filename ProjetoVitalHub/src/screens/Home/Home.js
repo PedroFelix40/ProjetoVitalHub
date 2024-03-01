@@ -18,7 +18,9 @@ const Consultas = [
     { id: 5, nome: "Garbs", situacao: "cancelado" },
 ]
 
-export const Home = () => {
+export const Home = ({
+    navigation
+}) => {
 
     // State para o estado da lista(cards)
     const [statusLista, setStatusList] = useState("pendente");
@@ -101,6 +103,7 @@ export const Home = () => {
             <ModalConsultas
                 visible={showModalConsultas}
                 setShowModalConsultas={setShowModalConsultas}
+                navigation={navigation}
             />
             
             

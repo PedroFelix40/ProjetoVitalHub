@@ -1,5 +1,3 @@
-import { Image, Text } from "react-native"
-
 // Import dos componentes
 import { Container, ContentAccount } from "../../components/Container/style"
 import { LogoStyle } from "../../components/Logo/style"

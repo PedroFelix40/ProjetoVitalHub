@@ -6,7 +6,7 @@ import { TitleConsulta } from "../../components/Title/style"
 import { SelectView } from "../SelectClinic/style"
 import { ContentSelect } from "./style"
 
-export const SelectMedicoScreen = () => {
+export const SelectMedicoScreen = ({ navigation }) => {
     return (
         <Container>
             <Scroll>
@@ -19,7 +19,7 @@ export const SelectMedicoScreen = () => {
                     <BoxSelectMedico />
                 </SelectView>
 
-                <ButtonModalStyle>
+                <ButtonModalStyle onPress={() => navigation.navigate("SelectDate")}>
                     <ButtonTitle>Continuar</ButtonTitle>
                 </ButtonModalStyle>
 
