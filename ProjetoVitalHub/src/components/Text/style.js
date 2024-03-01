@@ -13,8 +13,8 @@ export const Subtitle = styled.Text`
     font-family: 'Quicksand_500Medium';
     color: #5F5C6B;
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: ${(props) => props.margin ? props.margin : '16px'};
+    
 `
 
 export const LinkUtil = styled.Text`
@@ -34,6 +34,13 @@ export const TypeBold = styled(TextAge)`
     font-size: 14px;
     font-family: "Quicksand_600SemiBold";
     color: ${(props) => props.situacao == "pendente" ? "#49b3ba" : '#8c8a97'};
+`
+
+export const TextQuick = styled.Text`
+    color: #33303E;
+    font-family: "Quicksand_600SemiBold";
+    font-size: 16px;
+    /* text-align: left; */
 `
 
 export const TextStyle1 = styled.Text`

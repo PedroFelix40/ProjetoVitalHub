@@ -13,7 +13,9 @@ import { ButtonModalConfirmar } from "../../components/Button"
 import { useState } from "react"
 import { ModalAgendarConsulta } from "../../components/AppointmentModal/AppointmentModal"
 
-export const SelectDate = () => {
+export const SelectDate = ({
+    navigation
+}) => {
     const [showModalAgendar, setShowModalAgendar] = useState(false)
 
     return (
@@ -39,6 +41,7 @@ export const SelectDate = () => {
                     <ModalAgendarConsulta
                         visible={showModalAgendar}
                         setShowModalAgendar={setShowModalAgendar}
+                        navigation={navigation}
                     />
                 </ContentSelect>
             </Scroll>

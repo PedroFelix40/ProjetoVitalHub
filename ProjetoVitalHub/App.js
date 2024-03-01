@@ -32,6 +32,7 @@ import { MedicoProntuario } from './src/screens/MedicoProntuario/MedicoProntuari
 import { SelectClinic } from './src/screens/SelectClinic/SelectClinic';
 import { SelectMedicoScreen } from './src/screens/SelectMedicoScreen/SelectMedicoScreen';
 import { SelectDate } from './src/screens/SelectDate/SelectDate';
+import { Mapa } from './src/screens/Mapa/Mapa';
 
 
 
@@ -134,6 +135,12 @@ export default function App() {
           name="SelectDate"
           component={SelectDate}
           options={{ title: "SelectDate" }}
+        />
+        
+        <Stack.Screen
+          name="Mapa"
+          component={Mapa}
+          options={{ title: "Mapa" }}
         />
         
       </Stack.Navigator>

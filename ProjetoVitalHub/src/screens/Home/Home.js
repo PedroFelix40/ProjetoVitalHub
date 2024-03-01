@@ -7,7 +7,7 @@ import { FilterAppointment, IconeAppointment } from "./style"
 import { CardConsulta } from "../../components/CardConsulta/CardConsulta"
 import { ListComponent } from "../../components/List/List"
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal"
-import { AppointmentModal, ModalConsultas } from "../../components/AppointmentModal/AppointmentModal"
+import { AppointmentModal, ModalConsultas, ModalPerfilMed } from "../../components/AppointmentModal/AppointmentModal"
 import { ButtonAppointment } from "../../components/ButtonAppointment"
 
 const Consultas = [
@@ -29,6 +29,7 @@ export const Home = ({
     const [showModalCancel, setShowModalCancel] = useState(false)
     const [showModalAppointment, setShowModalAppointment] = useState(false)
     const [showModalConsultas, setShowModalConsultas] = useState(false)
+    const [showModalPerfilMed, setShowModalPerfilMed] = useState(false)
 
     return (
         <Container>
@@ -81,6 +82,7 @@ export const Home = ({
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
+                            onPressPerfilMed={() => setShowModalPerfilMed(true)}
                         />
                     )
 
@@ -106,6 +108,11 @@ export const Home = ({
                 navigation={navigation}
             />
             
+            <ModalPerfilMed
+                visible={showModalPerfilMed}
+                setShowModalPerfilMed={setShowModalPerfilMed}
+                navigation={navigation}
+            />
             
 
         </Container>

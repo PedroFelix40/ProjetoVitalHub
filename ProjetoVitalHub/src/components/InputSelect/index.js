@@ -16,7 +16,7 @@ const InputSelect = () => {
           return <FontAwesomeIcon icon={faCaretDown} color='#34898F' size={22}/>
         }}
         placeholder={{
-          label : 'Selecione um valor',
+          label : 'Selecione horário',
           value : null,
           color : '#34898F'
         }}

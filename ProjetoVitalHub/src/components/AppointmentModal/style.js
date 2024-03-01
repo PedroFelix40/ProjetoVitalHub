@@ -24,6 +24,7 @@ export const ImagePatient = styled.Image`
     width: 285px;
     height: 181px;
     border-radius: 10px;
+    margin-bottom: ${(props) => props.margin ? props.margin : '16px'};
 `
 
 export const ConsultasContent = styled(AppointmentContent)`
@@ -37,4 +38,7 @@ export const BoxConsultasInput = styled.View`
     width: 92%;
     margin: 10px 0px 20px;
 `
-
+export const BoxInfosConsultas = styled.View`
+    width: 90%;
+    align-items: flex-start;
+`

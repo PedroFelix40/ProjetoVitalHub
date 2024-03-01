@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardConsultaStyle = styled.View`
+export const CardConsultaStyle = styled.TouchableOpacity`
   width: 90%;
   height: 102px;
 

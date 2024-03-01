@@ -11,11 +11,12 @@ export const CardConsulta = ({
     data = [],
     situacao = 'pendente',
     onPressCancel,
-    onPressAppointment
+    onPressAppointment,
+    onPressPerfilMed
 }) => {
     return (
         // Container principal
-        <CardConsultaStyle>
+        <CardConsultaStyle onPress={onPressPerfilMed}>
             {/* Imagem do paciente */}
             <ImageUser source={ImageUser1} />
 
