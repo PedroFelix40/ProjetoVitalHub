@@ -1,9 +1,9 @@
 // Import dos componentes
-import { Container, ContentAccount } from "../../components/Container/style"
+import { Container, ContainerInput, ContentAccount } from "../../components/Container/style"
 import { LogoStyle } from "../../components/Logo/style"
 import { Title } from "../../components/Title/style"
 import { InputStyle } from "../../components/Input/style"
-import { LinkMedium, LinkMediumAccount } from "../../components/Link/style"
+import { LinkMedium, LinkMediumAccount, LinkUtil } from "../../components/Link/style"
 import { Button, ButtonGoogle } from "../../components/Button/style"
 import { ButtonTitle, ButtonTitleGoogle } from "../../components/ButtonTitle/style"
 
@@ -14,36 +14,50 @@ import logo from "../../../assets/logo.png"
 import { AntDesign } from '@expo/vector-icons';
 import { TextAccount } from "../../components/Text/style"
 
-export const Login = () => {
+export const Login = ({
+    navigation
+}) => {
     return (
         <Container>
 
             <LogoStyle source={logo} />
 
-            <Title>Entrar ou criar conta</Title>
+            <Title marginBottom={"20px"}>Entrar ou criar conta</Title>
 
-            <InputStyle
-                placeholder="Usuário ou email"
-            />
+            <ContainerInput>
+                <InputStyle
+                    placeholder="Usuário ou email"
+                />
 
-            <InputStyle
-                placeholder="Senha"
-            />
+                <InputStyle
+                    placeholder="Senha"
+                />
+            </ContainerInput>
 
-            <LinkMedium >Esqueceu sua senha?</LinkMedium>
+            <LinkUtil onPress={() => navigation.navigate("RecuperarSenha")}>
+                <LinkMedium >Esqueceu sua senha?</LinkMedium>
+            </LinkUtil>
 
-            <Button>
-                <ButtonTitle>Entrar</ButtonTitle>
-            </Button>
+            <ContainerInput>
+                <Button>
+                    <ButtonTitle>Entrar</ButtonTitle>
+                </Button>
 
-            <ButtonGoogle>
-                <AntDesign name="google" size={18} color="#496BBA" />
-                <ButtonTitleGoogle >Entrar com google</ButtonTitleGoogle>
-            </ButtonGoogle>
-            
+                <ButtonGoogle>
+                    <AntDesign name="google" size={18} color="#496BBA" />
+                    <ButtonTitleGoogle >Entrar com google</ButtonTitleGoogle>
+                </ButtonGoogle>
+            </ContainerInput>
+
+
             <ContentAccount>
                 <TextAccount>Não tem conta? </TextAccount>
-                <LinkMediumAccount >Crie uma conta agora</LinkMediumAccount>
+                <TextAccount
+                    fieldColor={"#4d659d"}
+                    onPress={() => navigation.navigate("CriarConta")}
+                >
+                    Crie uma conta agora
+                </TextAccount>
             </ContentAccount>
         </Container>
     )

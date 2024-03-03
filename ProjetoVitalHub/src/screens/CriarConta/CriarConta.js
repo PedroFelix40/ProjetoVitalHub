@@ -1,5 +1,5 @@
 // Import dos componentes
-import { Container } from "../../components/Container/style"
+import { Container, ContainerInput, ContainerInputButtom } from "../../components/Container/style"
 import { LogoStyle } from "../../components/Logo/style"
 import { Title } from "../../components/Title/style"
 import { LinkUtil, Subtitle } from "../../components/Text/style"
@@ -11,22 +11,25 @@ import { ButtonTitle } from "../../components/ButtonTitle/style"
 import logo from "../../../assets/logo.png"
 
 export const CriarConta = () => {
-    return(
+    return (
         <Container>
-            <LogoStyle source={logo}/>
+            <LogoStyle source={logo} />
 
             <Title>Criar conta</Title>
 
             <Subtitle>Insira seu endereço de e-mail e senha para realizar seu cadastro.</Subtitle>
 
-            <InputStyle placeholder="Usuário ou E-mail"/>
-            <InputStyle placeholder="Senha"/>
-            <InputStyle placeholder="Confirme a senha"/>
+            <ContainerInputButtom>
+                <ContainerInput>
+                    <InputStyle placeholder="Usuário ou E-mail" />
+                    <InputStyle placeholder="Senha" />
+                    <InputStyle placeholder="Confirme a senha" />
+                </ContainerInput>
 
-            <Button>
-                <ButtonTitle>cadastrar</ButtonTitle>
-            </Button>
-
+                <Button>
+                    <ButtonTitle>cadastrar</ButtonTitle>
+                </Button>
+            </ContainerInputButtom>
             <LinkUtil>Cancelar</LinkUtil>
         </Container>
     )

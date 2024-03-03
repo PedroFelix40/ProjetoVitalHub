@@ -14,6 +14,7 @@ import { Label } from "../Label"
 export const AppointmentModal = ({
     visible,
     setShowModalAppointment,
+    dados
 }) => {
     return (
         <Modal visible={visible} transparent={true} animationType="fade">
@@ -25,7 +26,7 @@ export const AppointmentModal = ({
 
                     <Title>Pedro</Title>
 
-                    <Subtitle>22 anos * niccole@gmail.com</Subtitle>
+                    <Subtitle>{dados.nome} * niccole@gmail.com</Subtitle>
 
                     <ButtonModal>
                         <ButtonTitle>Inserir protuário</ButtonTitle>

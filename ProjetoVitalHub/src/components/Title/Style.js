@@ -4,14 +4,20 @@ export const Title = styled.Text`
     font-size: 20px;
     font-family: 'MontserratAlternates_600SemiBold';
     color: #33303e;
-    margin-bottom: 5px;
+    margin-bottom: ${(props) => props.marginBottom ? props.marginBottom : '0px'};
     margin-top: ${(props) => props.marginTop ? props.marginTop : '0px'};
+    
+    text-align: ${(props) => props.textAlign ? props.textAlign : 'start'};
 `
-export const TitleName = styled(Title)`
+export const TitleName = styled.Text`
     font-size: 16px;
-    margin-bottom: 0px;
+    font-family: 'MontserratAlternates_600SemiBold';
+    color: #33303e;
 `
 
-export const TitleConsulta = styled(Title)`
+export const TitleConsulta = styled.Text`
     margin-top: 30px;
+    font-size: 20px;
+    font-family: 'MontserratAlternates_600SemiBold';
+    color: #33303e;
 `

@@ -31,7 +31,7 @@ export const SelectClinic = ({
                         <ButtonTitle>Continuar</ButtonTitle>
                     </ButtonModalStyle>
 
-                    <ButtonSecondary>
+                    <ButtonSecondary onPress={() => navigation.navigate("Home")}>
                         <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                     </ButtonSecondary>
 

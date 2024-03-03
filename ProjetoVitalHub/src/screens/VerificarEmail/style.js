@@ -5,7 +5,7 @@ export const InputVerification = styled.TextInput`
     height: 62px;
 
     border-radius: 5px;
-    border: 2px solid #49b3ba;
+    border: 2px solid #77CACF;
 
     font-family: 'Quicksand_600SemiBold';
     font-size: 40px;

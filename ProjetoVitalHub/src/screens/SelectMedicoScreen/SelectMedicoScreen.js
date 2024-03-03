@@ -23,7 +23,7 @@ export const SelectMedicoScreen = ({ navigation }) => {
                     <ButtonTitle>Continuar</ButtonTitle>
                 </ButtonModalStyle>
 
-                <ButtonSecondary>
+                <ButtonSecondary onPress={() => navigation.navigate("Home")}>
                     <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                 </ButtonSecondary>
             </ContentSelect>

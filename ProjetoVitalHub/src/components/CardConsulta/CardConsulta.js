@@ -26,17 +26,17 @@ export const CardConsulta = ({
                     <TitleName>{data.nome}</TitleName>
 
                     <AgeAndTypeBox>
-                        <TextAge>22 anos</TextAge>
-                        <TypeBold>Rotina</TypeBold>
+                        <TextAge>{data.idade} anos</TextAge>
+                        <TypeBold>{data.typeExame}</TypeBold>
                     </AgeAndTypeBox>
                 </BoxInfos>
 
                 <ViewRow>
                     {/* Icone e Horário */}
 
-                    <ClockCard>
+                    <ClockCard situacao={situacao}>
                         <AntDesign name="clockcircle" size={14} color={situacao == "pendente" ? "#49b3ba" : "#8c8a97"} />
-                        <TypeBold situacao={situacao}>14h</TypeBold>
+                        <TypeBold situacao={situacao}>{data.horario}</TypeBold>
                     </ClockCard>
 
                     {/* Botão Cancelar ou ver prontuário */}

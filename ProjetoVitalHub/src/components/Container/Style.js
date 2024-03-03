@@ -29,3 +29,18 @@ export const ContainerPerfil = styled.View`
     justify-content: space-between;
     gap: 24px;
 `
+
+export const ContainerInput = styled.View`
+    width: 100%;
+
+    align-items: center;
+
+    gap: 15px;
+`
+
+export const ContainerInputButtom = styled.View`
+    width: 100%;
+    align-items: center;
+
+    gap: 30px;
+`

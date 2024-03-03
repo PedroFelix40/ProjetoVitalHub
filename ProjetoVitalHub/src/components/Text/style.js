@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const TextAccount = styled.Text`
+    margin-top: 30px;
     font-size: 14px;
     font-family: 'MontserratAlternates_600SemiBold';
-    color: #4E4B59;
-    margin-top: 30px;
+    
+    color: ${(props) => props.fieldColor ? props.fieldColor : "#4E4B59"};
 `
 
 export const Subtitle = styled.Text`
@@ -47,7 +48,7 @@ export const TextStyle1 = styled.Text`
     font-size: 14;
     font-family: "Quicksand_600SemiBold";
 
-    color: ${props => `${props.fieldColor}` };
+    color: ${(props) => props.fieldColor ? props.fieldColor : '#8c8a97'} ;
 
 `
 

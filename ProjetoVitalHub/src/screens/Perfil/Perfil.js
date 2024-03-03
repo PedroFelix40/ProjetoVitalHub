@@ -1,5 +1,5 @@
 // Import dos componentes
-import { Container, ContainerBox, ContainerPerfil, Scroll } from "../../components/Container/style"
+import { Container, ContainerBox, ContainerInputButtom, ContainerPerfil, Scroll } from "../../components/Container/style"
 import { FotoStyle } from "../../components/FotoPerfil/style"
 
 // Import da foto
@@ -9,57 +9,87 @@ import { Subtitle } from "../../components/Text/style"
 import { BoxInput } from "../../components/BoxInput"
 import { Button } from "../../components/Button/style"
 import { ButtonTitle } from "../../components/ButtonTitle/style"
+import { Alert } from "react-native"
+import { DadosPessoais } from "./style"
 
-export const Perfil = () => {
+// Array de objetos mocados
+let profile =
+{
+    id: 1,
+    nome: 'Pedro Felix',
+    email: 'felixpedro@gmail',
+    nascimento: '25/02/2004',
+    cpf: '010.101.010/10',
+    logradouro: 'Rua da minha casa',
+    cep: '00000-000',
+    cidade: 'Itaquaquecetuba'
+}
+
+
+export const Perfil = ({
+    navigation,
+}) => {
+    const AlertPage = () => {
+        Alert.alert(
+            //Title
+            'Desculpe o transtorno',
+            //Body
+            'Página em desenvolvimento'
+        )
+    }
     return (
-        <Scroll>
-            <Container>
+        <Container>
+            <Scroll>
                 <FotoStyle source={fotoPerfil} />
 
-                <Title>Richard Kosta</Title>
-                <Subtitle>richard.kosta@gmail.com</Subtitle>
+                <DadosPessoais>
+                    <Title textAlign={"center"}>{profile.nome}</Title>
+                    <Subtitle>{profile.email}</Subtitle>
+                </DadosPessoais>
 
                 <ContainerPerfil>
                     <BoxInput
                         textLabel='Data de nascimento'
                         placeholder='Data de nascimento...'
-                        fieldValue='25/02/2004'
+                        fieldValue={profile.nascimento}
                     />
                     <BoxInput
                         textLabel='CPF'
                         placeholder='CPF...'
-                        fieldValue='033.420.009.78'
+                        fieldValue={profile.cpf}
                     />
                     <BoxInput
                         textLabel='Endereço'
                         placeholder='Endereço...'
-                        fieldValue='Rua Lageado'
+                        fieldValue={profile.logradouro}
                     />
                     <ContainerBox>
                         <BoxInput
                             fieldWidth={45}
                             textLabel='CEP'
                             placeholder='CEP...'
-                            fieldValue='08573710'
+                            fieldValue={profile.cep}
                         />
 
                         <BoxInput
                             fieldWidth={50}
                             textLabel='Cidade'
                             placeholder='Cidade...'
-                            fieldValue='Itaquaquecetuba'
+                            fieldValue={profile.cidade}
                         />
                     </ContainerBox>
 
-                    <Button>
-                        <ButtonTitle>cadastrar</ButtonTitle>
-                    </Button>
-                    
-                    <Button>
-                        <ButtonTitle>editar</ButtonTitle>
-                    </Button>
+                    <ContainerInputButtom>
+                        <Button onPress={() => navigation.navigate("Home")}>
+                            <ButtonTitle>cadastrar</ButtonTitle>
+                        </Button>
+
+                        <Button onPress={AlertPage}>
+                            <ButtonTitle>editar</ButtonTitle>
+                        </Button>
+                    </ContainerInputButtom>
                 </ContainerPerfil>
-            </Container>
-        </Scroll>
+            </Scroll>
+        </Container>
     )
 }

@@ -5,9 +5,12 @@ export const LinkMedium = styled.Text`
     font-family: 'MontserratAlternates_500Medium';
     text-decoration: underline;
     color: #8c8a97;
-    margin-top: 10px;
+
+    margin: 10px 0px 30px 20px;
+`
+
+export const LinkUtil = styled.TouchableOpacity`
     align-self: flex-start;
-    margin-left: 20px;
 `
 
 export const LinkMediumAccount = styled(LinkMedium)`

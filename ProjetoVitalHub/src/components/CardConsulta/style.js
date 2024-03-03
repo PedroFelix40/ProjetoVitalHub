@@ -55,7 +55,7 @@ export const ClockCard = styled.View`
   gap: 6px;
   padding: 4px 23px;
   border-radius: 5px;
-  background-color: ${(props) => props.situacao == "pendente" ? "#E8FCFD" : "#F1f0f5"};
+  background-color: ${(props) => props.situacao == "pendente" ? "#E8FCFD" : "#F1f0f5" };
   align-items: center;
 `
 export const ButtonCard = styled.TouchableOpacity`

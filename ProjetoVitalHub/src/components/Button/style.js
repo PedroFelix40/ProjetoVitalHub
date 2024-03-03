@@ -20,7 +20,6 @@ export const Button = styled.TouchableOpacity`
 export const ButtonGoogle = styled(Button)`
     background-color: #FAFAFA;
     flex-direction: row;
-    margin-top: 15px;
     gap: 27px;
 `
 
