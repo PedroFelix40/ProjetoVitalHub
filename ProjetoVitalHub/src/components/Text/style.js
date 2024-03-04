@@ -45,7 +45,7 @@ export const TextQuick = styled.Text`
 `
 
 export const TextStyle1 = styled.Text`
-    font-size: 14;
+    font-size: 14px;
     font-family: "Quicksand_600SemiBold";
 
     color: ${(props) => props.fieldColor ? props.fieldColor : '#8c8a97'} ;

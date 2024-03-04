@@ -7,7 +7,7 @@ export const Title = styled.Text`
     margin-bottom: ${(props) => props.marginBottom ? props.marginBottom : '0px'};
     margin-top: ${(props) => props.marginTop ? props.marginTop : '0px'};
     
-    text-align: ${(props) => props.textAlign ? props.textAlign : 'start'};
+    text-align: ${(props) => props.textAlign ? props.textAlign : 'left'};
 `
 export const TitleName = styled.Text`
     font-size: 16px;
@@ -16,7 +16,7 @@ export const TitleName = styled.Text`
 `
 
 export const TitleConsulta = styled.Text`
-    margin-top: 30px;
+    margin: 30px 0px ${props => props.marginTop ? props.marginTop : "0px"};
     font-size: 20px;
     font-family: 'MontserratAlternates_600SemiBold';
     color: #33303e;

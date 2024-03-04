@@ -4,8 +4,8 @@ import mapaImage from "../../../assets/imageMapa.png"
 import { Title } from "../../components/Title/style"
 import { Subtitle } from "../../components/Text/style"
 import { BoxInput } from "../../components/BoxInput"
-import { ButtonModalStyle } from "../../components/Button/style"
-import { ButtonTitle } from "../../components/ButtonTitle/style"
+import { ButtonModalStyle, ButtonSecondary } from "../../components/Button/style"
+import { ButtonSecondaryTitle, ButtonTitle } from "../../components/ButtonTitle/style"
 
 export const Mapa = ({ navigation }) => {
     return (
@@ -38,9 +38,13 @@ export const Mapa = ({ navigation }) => {
                     />
                 </ContainerBox>
 
-                <ButtonModalStyle onPress={() => navigation.navigate("Home")}>
+                <ButtonSecondary onPress={() => navigation.navigate("Home")}>
+                    <ButtonSecondaryTitle>Voltar</ButtonSecondaryTitle>
+                </ButtonSecondary>
+
+                {/* <ButtonModalStyle onPress={() => navigation.navigate("Home")}>
                     <ButtonTitle>Voltar para home</ButtonTitle>
-                </ButtonModalStyle>
+                </ButtonModalStyle> */}
             </ContainerPerfil>
 
         </Container>

@@ -9,7 +9,7 @@ export const SelectContent = styled.View`
 export const SelectView = styled.View`
     width: 100%; 
     align-items: center;
-    margin-top: 35px;
+    margin: 35px 0px ${props => props.marginTop ? props.marginTop : "0px"};
     gap : 15px;
 `
 

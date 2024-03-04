@@ -12,14 +12,13 @@ export const InputStyle = styled.TextInput`
     font-size: 14px;
     font-family: 'MontserratAlternates_600SemiBold';
     color: #34898f;
-    /* color: ${props => `${props.fieldColor}`}; */
-
+    color: ${props => props.fieldColor ? props.fieldColor : "#33303E"};
 `
 
 export const InputDados = styled(InputStyle)`
     height: ${props => `${props.fieldHeight}px`};
     margin-top: 6px;
-    color: ${props => `${props.fieldColor}`};
+    /* color: ${props => props.fieldColor ? props.fieldColor : "#33303E"}; */
     background-color: #F5F3F3;
     /* border: 2px solid #F5F3F3; */
     border: ${props => `2px solid ${props.fieldBorderColor}`};

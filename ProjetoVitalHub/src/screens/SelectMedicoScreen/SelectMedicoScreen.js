@@ -13,7 +13,7 @@ export const SelectMedicoScreen = ({ navigation }) => {
             <ContentSelect>
                 <TitleConsulta>Selecionar médico</TitleConsulta>
 
-                <SelectView>
+                <SelectView marginTop={"72px"}>
                     <BoxSelectMedico />
                     <BoxSelectMedico />
                     <BoxSelectMedico />

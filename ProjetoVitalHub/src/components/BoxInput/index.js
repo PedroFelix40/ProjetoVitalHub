@@ -23,7 +23,6 @@ export const BoxInput = ({
             />
 
             <InputText
-                fieldColor={fieldColor}
                 fieldBorderColor={fieldBorderColor}
                 fieldHeight={fieldHeight}
                 editable={editable}

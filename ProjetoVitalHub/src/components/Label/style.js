@@ -5,5 +5,5 @@ export const InputLabel = styled.Text`
     width: 100%;
     font-size: 16px;
     font-family: 'Quicksand_600SemiBold';
-    color: #33303E;
+    color: ${props => props.fieldColor ? props.fieldColor : "#33303E"};
 `

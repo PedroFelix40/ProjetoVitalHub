@@ -33,6 +33,7 @@ import { SelectClinic } from './src/screens/SelectClinic/SelectClinic';
 import { SelectMedicoScreen } from './src/screens/SelectMedicoScreen/SelectMedicoScreen';
 import { SelectDate } from './src/screens/SelectDate/SelectDate';
 import { Mapa } from './src/screens/Mapa/Mapa';
+import { Prescricao } from './src/screens/Prescricao/Prescricao';
 
 
 
@@ -141,6 +142,12 @@ export default function App() {
           name="Mapa"
           component={Mapa}
           options={{ title: "Mapa" }}
+        />
+        
+        <Stack.Screen
+          name="Prescricao"
+          component={Prescricao}
+          options={{ title: "Prescricao" }}
         />
         
       </Stack.Navigator>

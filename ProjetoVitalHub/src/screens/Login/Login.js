@@ -3,7 +3,7 @@ import { Container, ContainerInput, ContentAccount } from "../../components/Cont
 import { LogoStyle } from "../../components/Logo/style"
 import { Title } from "../../components/Title/style"
 import { InputStyle } from "../../components/Input/style"
-import { LinkMedium, LinkMediumAccount, LinkUtil } from "../../components/Link/style"
+import { LinkMedium, LinkUtil } from "../../components/Link/style"
 import { Button, ButtonGoogle } from "../../components/Button/style"
 import { ButtonTitle, ButtonTitleGoogle } from "../../components/ButtonTitle/style"
 

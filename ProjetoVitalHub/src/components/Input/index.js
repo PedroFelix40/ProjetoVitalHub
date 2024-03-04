@@ -3,7 +3,7 @@ import { InputDados } from "./style"
 export const InputText = ({
     placeholder,
     fieldHeight = 50,
-    fieldColor = "#33303E",
+    fieldColor = "",
     fieldBorderColor = "#F5F3F3",
     fieldValue = null,
     onChangeText = null,

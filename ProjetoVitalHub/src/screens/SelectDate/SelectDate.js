@@ -22,7 +22,7 @@ export const SelectDate = ({
         <Container>
             <Scroll>
                 <ContentSelect>
-                    <TitleConsulta>Selecione data</TitleConsulta>
+                    <TitleConsulta marginTop={"35px"}>Selecione data</TitleConsulta>
 
                     <CalendarMaximized />
 
