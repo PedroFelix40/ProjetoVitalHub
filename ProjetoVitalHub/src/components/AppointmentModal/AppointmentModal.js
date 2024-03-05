@@ -9,6 +9,7 @@ import { Subtitle, TextQuick } from "../Text/style"
 import { BoxInput } from "../BoxInput"
 import { BntListConsulta, BtnListAppointment } from "../BtnListAppointment/BtnListAppointment"
 import { Label } from "../Label"
+import { useState } from "react"
 
 
 export const AppointmentModal = ({
@@ -46,6 +47,8 @@ export const ModalConsultas = ({
     setShowModalConsultas,
     navigation
 }) => {
+    const [statusLista, setStatusList] = useState("pendente");
+
     return (
         <Modal visible={visible} transparent={true} animationType="fade">
             <ConsultaStyleModal>
@@ -59,17 +62,17 @@ export const ModalConsultas = ({
                     />
                     <BoxConsultasInput>
 
-                        <BntListConsulta
+                        <BtnListAppointment
                             textButton={"Rotina"}
                             fieldBorderColor="#60BFC5"
                         />
 
-                        <BntListConsulta
+                        <BtnListAppointment
                             textButton={"Exame"}
                             fieldBorderColor="#60BFC5"
                         />
 
-                        <BntListConsulta
+                        <BtnListAppointment
                             textButton={"Urgência"}
                             fieldBorderColor="#60BFC5"
                         />

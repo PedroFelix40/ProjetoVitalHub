@@ -10,7 +10,9 @@ import { ButtonTitle } from "../../components/ButtonTitle/style"
 // Import da logo
 import logo from "../../../assets/logo.png"
 
-export const CriarConta = () => {
+export const CriarConta = ({
+    navigation
+}) => {
     return (
         <Container>
             <LogoStyle source={logo} />
@@ -26,11 +28,11 @@ export const CriarConta = () => {
                     <InputStyle placeholder="Confirme a senha" />
                 </ContainerInput>
 
-                <Button>
+                <Button onPress={() => navigation.replace("Login")}>
                     <ButtonTitle>cadastrar</ButtonTitle>
                 </Button>
             </ContainerInputButtom>
-            <LinkUtil>Cancelar</LinkUtil>
+            <LinkUtil onPress={() => navigation.replace("Login")}>Cancelar</LinkUtil>
         </Container>
     )
 }

@@ -7,7 +7,7 @@ export const FilterAppointment = styled.View`
     flex-direction: row;
     justify-content: space-between;
 
-    margin-top: 38px;
+    margin: 30px 0px 20px;
 `
 
 export const IconeAppointment = styled(FotoPerfilHome)`

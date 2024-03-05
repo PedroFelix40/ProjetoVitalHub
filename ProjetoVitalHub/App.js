@@ -34,6 +34,7 @@ import { SelectMedicoScreen } from './src/screens/SelectMedicoScreen/SelectMedic
 import { SelectDate } from './src/screens/SelectDate/SelectDate';
 import { Mapa } from './src/screens/Mapa/Mapa';
 import { Prescricao } from './src/screens/Prescricao/Prescricao';
+import { Main } from './src/screens/Main/Main';
 
 
 
@@ -64,17 +65,23 @@ export default function App() {
     //options(title): titulo da tela
 
     <NavigationContainer>
+
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Navegacao"
           component={Navegacao}
           options={{ title: "Navegacao" }}
-        />
+        /> */}
 
         <Stack.Screen
           name="Login"
           component={Login}
           options={{ title: "Login" }}
+        />
+
+        <Stack.Screen
+          name='Main'
+          component={Main}
         />
 
         <Stack.Screen
@@ -88,68 +95,68 @@ export default function App() {
           component={CriarConta}
           options={{ title: "Criar Conta" }}
         />
-        
+
         <Stack.Screen
           name="VerificarEmail"
           component={VerificarEmail}
           options={{ title: "Verificar Email" }}
         />
-        
+
         <Stack.Screen
           name="RedifinirSenha"
           component={RedifinirSenha}
           options={{ title: "Redifinir Senha" }}
         />
-        
+
         <Stack.Screen
           name="Perfil"
           component={Perfil}
           options={{ title: "Perfil" }}
         />
-        
+
         <Stack.Screen
           name="Home"
           component={Home}
           options={{ title: "Home" }}
         />
-        
+
         <Stack.Screen
           name="MedicoProntuario"
           component={MedicoProntuario}
           options={{ title: "Medico Prontuario" }}
         />
-        
+
         <Stack.Screen
           name="SelectClinic"
           component={SelectClinic}
           options={{ title: "SelectClinic" }}
         />
-        
-        
+
+
         <Stack.Screen
           name="SelectMedicoScreen"
           component={SelectMedicoScreen}
           options={{ title: "SelectMedicoScreen" }}
-        /> 
-        
+        />
+
         <Stack.Screen
           name="SelectDate"
           component={SelectDate}
           options={{ title: "SelectDate" }}
         />
-        
+
         <Stack.Screen
           name="Mapa"
           component={Mapa}
           options={{ title: "Mapa" }}
         />
-        
+
         <Stack.Screen
           name="Prescricao"
           component={Prescricao}
           options={{ title: "Prescricao" }}
         />
-        
+
       </Stack.Navigator>
     </NavigationContainer>
   );

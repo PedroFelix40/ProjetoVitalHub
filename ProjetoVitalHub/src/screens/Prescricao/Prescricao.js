@@ -42,7 +42,9 @@ export const Prescricao = ({
                         textLabel={"Exames médicos"}
                         placeholder={"                  Nenhuma foto informada"}
                         fieldHeight={"111"}
-                    />
+                    >
+                        <MaterialCommunityIcons name="camera-plus-outline" size={20} color="#fff" />
+                    </BoxInput>
 
 
                     <ContainerBoxPrescricao>

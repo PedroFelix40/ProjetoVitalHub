@@ -17,6 +17,11 @@ import { TextAccount } from "../../components/Text/style"
 export const Login = ({
     navigation
 }) => {
+
+    async function Login() {
+        navigation.navigate("Main")
+    }
+
     return (
         <Container>
 
@@ -39,7 +44,7 @@ export const Login = ({
             </LinkUtil>
 
             <ContainerInput>
-                <Button>
+                <Button onPress={(e) => Login()}>
                     <ButtonTitle>Entrar</ButtonTitle>
                 </Button>
 
@@ -54,7 +59,7 @@ export const Login = ({
                 <TextAccount>Não tem conta? </TextAccount>
                 <TextAccount
                     fieldColor={"#4d659d"}
-                    onPress={() => navigation.navigate("CriarConta")}
+                    onPress={() => navigation.replace("CriarConta")}
                 >
                     Crie uma conta agora
                 </TextAccount>
