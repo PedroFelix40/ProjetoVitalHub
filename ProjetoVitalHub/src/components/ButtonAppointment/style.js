@@ -5,6 +5,6 @@ export const ButtonAppointmentStyled = styled.TouchableOpacity`
     width: 60px;
     position: absolute;
     z-index: 100;
-    top: 650px;
-    right: 20px;
+    bottom: 15px;
+    right: 21px;
 `

@@ -13,3 +13,14 @@ export const FilterAppointment = styled.View`
 export const IconeAppointment = styled(FotoPerfilHome)`
 
 `
+
+export const IconLogin = styled.Image`
+    height: 30px;
+    width: 30px;
+`
+
+export const ButtonIcon = styled.TouchableOpacity`
+    position: absolute;
+    left: 20px;
+    top: 20px;
+`

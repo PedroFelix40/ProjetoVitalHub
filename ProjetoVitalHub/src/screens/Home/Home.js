@@ -3,7 +3,7 @@ import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListA
 import { Calendarhome } from "../../components/CalendarHome/CalendarHome"
 import { Container } from "../../components/Container/style"
 import { HeaderHome } from "../../components/Header/HeaderHome"
-import { FilterAppointment, IconeAppointment } from "./style"
+import { FilterAppointment, IconLogin } from "./style"
 import { CardConsulta } from "../../components/CardConsulta/CardConsulta"
 import { ListComponent } from "../../components/List/List"
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal"
@@ -102,6 +102,7 @@ export const Home = ({
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
                 dados={Consultas}
+                navigation={navigation}
             />
 
             <ModalConsultas

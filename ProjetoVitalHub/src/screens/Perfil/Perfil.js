@@ -81,11 +81,15 @@ export const Perfil = ({
 
                     <ContainerInputButtom>
                         <Button onPress={() => navigation.navigate("Home")}>
-                            <ButtonTitle>cadastrar</ButtonTitle>
+                            <ButtonTitle>Salvar</ButtonTitle>
                         </Button>
 
                         <Button onPress={AlertPage}>
                             <ButtonTitle>editar</ButtonTitle>
+                        </Button>
+                        
+                        <Button fieldBckColor={"#ACABB7"} fieldBorderColor={"#ACABB7"} onPress={AlertPage}>
+                            <ButtonTitle>sair do app</ButtonTitle>
                         </Button>
                     </ContainerInputButtom>
                 </ContainerPerfil>

@@ -15,7 +15,8 @@ import { useState } from "react"
 export const AppointmentModal = ({
     visible,
     setShowModalAppointment,
-    dados
+    dados,
+    navigation
 }) => {
     return (
         <Modal visible={visible} transparent={true} animationType="fade">
@@ -29,7 +30,7 @@ export const AppointmentModal = ({
 
                     <Subtitle>{dados.nome} * niccole@gmail.com</Subtitle>
 
-                    <ButtonModal>
+                    <ButtonModal onPress={() => navigation.navigate("MedicoProntuario") || setShowModalAppointment(false)} >
                         <ButtonTitle>Inserir protuário</ButtonTitle>
                     </ButtonModal>
 
@@ -133,7 +134,7 @@ export const ModalAgendarConsulta = ({
                         <Subtitle margin={"5px 0px 0px"}>Rotina</Subtitle>
                     </BoxInfosConsultas>
 
-                    <ButtonModalStyle onPress={() => navigation.navigate("Home")}>
+                    <ButtonModalStyle onPress={() => navigation.navigate("Main")}>
                         <ButtonTitle>Confirmar</ButtonTitle>
                     </ButtonModalStyle>
 

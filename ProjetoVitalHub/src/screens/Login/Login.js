@@ -19,7 +19,7 @@ export const Login = ({
 }) => {
 
     async function Login() {
-        navigation.navigate("Main")
+        navigation.replace("Main")
     }
 
     return (

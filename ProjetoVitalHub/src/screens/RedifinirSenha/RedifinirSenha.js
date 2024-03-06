@@ -8,12 +8,20 @@ import { Subtitle } from "../../components/Text/style"
 import { InputStyle } from "../../components/Input/style"
 import { Button } from "../../components/Button/style"
 import { ButtonTitle } from "../../components/ButtonTitle/style"
+import { ButtonIcon, IconLogin } from "../Home/style"
+
+import iconFechar from "../../../assets/fecharIcon.png"
+
 
 export const RedifinirSenha = ({
     navigation
 }) => {
     return (
         <Container>
+            <ButtonIcon onPress={() => navigation.replace("Login")}>
+                <IconLogin source={iconFechar} />
+            </ButtonIcon>
+
             <LogoStyle source={logo} />
 
             <Title>Redifinir senha</Title>
@@ -26,7 +34,7 @@ export const RedifinirSenha = ({
                     <InputStyle placeholder="Confirme a nova senha" />
                 </ContainerInput>
 
-                <Button onPress={() => navigation.navigate("Login")}>
+                <Button onPress={() => navigation.replace("Login")}>
                     <ButtonTitle>confirme a nova senha</ButtonTitle>
                 </Button>
             </ContainerInputButtom>

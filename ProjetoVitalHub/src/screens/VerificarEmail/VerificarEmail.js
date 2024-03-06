@@ -10,6 +10,9 @@ import { BoxCode, InputVerification } from "./style"
 import { Button } from "../../components/Button/style"
 import { ButtonTitle } from "../../components/ButtonTitle/style"
 import { InputStyle } from "../../components/Input/style"
+import { ButtonIcon, IconLogin } from "../Home/style"
+
+import iconFechar from "../../../assets/fecharIcon.png"
 
 
 export const VerificarEmail = ({
@@ -17,6 +20,10 @@ export const VerificarEmail = ({
 }) => {
     return (
         <Container>
+            <ButtonIcon onPress={() => navigation.navigate("Login")}>
+                <IconLogin source={iconFechar} />
+            </ButtonIcon>
+
             <LogoStyle source={logo} />
 
             <Title>Verifique seu e-mail</Title>
@@ -31,7 +38,7 @@ export const VerificarEmail = ({
                     <InputVerification value="0" />
                 </BoxCode>
 
-                <Button onPress={() => navigation.navigate("RedifinirSenha")}>
+                <Button onPress={() => navigation.replace("RedifinirSenha")}>
                     <ButtonTitle>confrimar</ButtonTitle>
                 </Button>
             </ContainerInputButtom>
