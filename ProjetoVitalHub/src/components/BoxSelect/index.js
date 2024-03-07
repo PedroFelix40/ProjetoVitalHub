@@ -8,22 +8,28 @@ import { Avaliacao } from "../BoxSelectMedico/style";
 
 
 export const BoxSelect = ({
-    isSelected, onSelect
+    isSelected,
+    onSelect,
+    clickButton = false,
+    fieldBckColor,
+    onPress
 }) => {
     return (
-        <BoxSelectStyle clickButton={isSelected} onPress={onSelect}>
-            <BoxInformacoes>
+        <BoxSelectStyle clickButton={clickButton} onPress={onPress}>
+            <>
+                <BoxInformacoes>
                 <TitleName>Clínica Natureh</TitleName>
                 <Avaliacao source={aval}/>
             </BoxInformacoes>
 
-            <BoxInformacoes>
-                <TextStyle1>São Paulo, SP</TextStyle1>
-                <BoxDay>
-                    <FontAwesome5 name="calendar-day" size={14} color="#49B3BA" />
-                    <TextStyle1 fieldColor="#49B3BA">Seg-Sex</TextStyle1>
-                </BoxDay>
-            </BoxInformacoes>
+                <BoxInformacoes>
+                    <TextStyle1>São Paulo, SP</TextStyle1>
+                    <BoxDay>
+                        <FontAwesome5 name="calendar-day" size={14} color="#49B3BA" />
+                        <TextStyle1 fieldColor="#49B3BA">Seg-Sex</TextStyle1>
+                    </BoxDay>
+                </BoxInformacoes>
+            </>
         </BoxSelectStyle>
     )
 }

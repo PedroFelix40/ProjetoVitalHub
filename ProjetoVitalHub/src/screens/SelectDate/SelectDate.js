@@ -34,7 +34,7 @@ export const SelectDate = ({
                         onPressConfirmar={() => setShowModalAgendar(true)}
                     />
 
-                    <ButtonSecondary onPress={() => navigation.replace("Home")}>
+                    <ButtonSecondary onPress={() => navigation.replace("Main")}>
                         <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                     </ButtonSecondary>
 

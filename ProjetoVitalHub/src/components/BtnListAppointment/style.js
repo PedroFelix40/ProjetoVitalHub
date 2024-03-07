@@ -4,10 +4,10 @@ export const ButtonTabStyle = styled.TouchableHighlight`
     padding: 12px 14px;
     border-radius: 5px;
 
-    /* Validação botão */
+    /* Validação botão */ 
     ${(props) => props.clickButton ? css`
-        background-color: #496bba;
-        /* background-color: ${props => `${props.fieldBckColor}`}; */
+        /* background-color: #496bba; */
+        background-color: ${props => props.fieldBckColor ? props.fieldBckColor : "#496bba"};
     `:
         css`
         background-color: #fbfbfb;
@@ -26,7 +26,8 @@ export const ButtonTextStyle = styled.Text`
         `
         :
         css`
-            color: #607EC5;
+            /* color: #607EC5; */
+            color: ${props => props.fieldColor ? props.fieldColor : "#607EC5"}
         `}
 `
 

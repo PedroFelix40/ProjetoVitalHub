@@ -38,13 +38,10 @@ export const Mapa = ({ navigation }) => {
                     />
                 </ContainerBox>
 
-                <ButtonSecondary onPress={() => navigation.navigate("Home")}>
+                <ButtonSecondary onPress={() => navigation.replace("Main")}>
                     <ButtonSecondaryTitle>Voltar</ButtonSecondaryTitle>
                 </ButtonSecondary>
 
-                {/* <ButtonModalStyle onPress={() => navigation.navigate("Home")}>
-                    <ButtonTitle>Voltar para home</ButtonTitle>
-                </ButtonModalStyle> */}
             </ContainerPerfil>
 
         </Container>

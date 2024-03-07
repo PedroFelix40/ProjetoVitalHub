@@ -5,23 +5,13 @@ export const BtnListAppointment = ({
     clickButton = false,
     onPress,
     fieldBorderColor = "#496bba",
+    fieldColor,
+    fieldBckColor
 }) => {
     return(
-        <ButtonTabStyle fieldBorderColor={fieldBorderColor} clickButton={clickButton} onPress={onPress}>
-            <ButtonTextStyle clickButton={clickButton}>{textButton}</ButtonTextStyle>
+        <ButtonTabStyle fieldBckColor={fieldBckColor} fieldBorderColor={fieldBorderColor} clickButton={clickButton} onPress={onPress}>
+            <ButtonTextStyle fieldColor={fieldColor} clickButton={clickButton}>{textButton}</ButtonTextStyle>
         </ButtonTabStyle>
-    );
+    ); 
 };
 
-export const BntListConsulta = ({
-    textButton,
-    clickButton = false,
-    onPress,
-    fieldBorderColor = "#60BFC5",
-}) =>{
-    return(
-        <ButtonTabStyle fieldBorderColor={fieldBorderColor} clickButton={clickButton} onPress={onPress}>
-            <TextStyle clickButton={clickButton}>{textButton}</TextStyle>
-        </ButtonTabStyle>
-    )
-}

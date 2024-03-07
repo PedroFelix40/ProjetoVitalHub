@@ -17,7 +17,7 @@ export const Prescricao = ({
             <Scroll>
                 <FotoStyle source={{ uri: "https://media.licdn.com/dms/image/D4D03AQE9_PLYntkCmw/profile-displayphoto-shrink_800_800/0/1708700875958?e=1715212800&v=beta&t=ZCHIpyvcu03a35K-8J0mVD387-G4HjKh0_xoUw2rINQ" }} />
 
-                <Title marginTop={'20px'} textAlign={"center"}>Gelipe fois</Title>
+                <Title marginTop={'20px'} textAlign={"center"}>Dr. Gelipe fois</Title>
                 <Subtitle>15 anos fythoy@gmail.com</Subtitle>
 
                 <ContainerInput>
@@ -67,7 +67,7 @@ export const Prescricao = ({
                         fieldHeight={"103"}
                     />
 
-                    <ButtonSecondary>
+                    <ButtonSecondary onPress={() => navigation.navigate("Main")}>
                         <ButtonSecondaryTitle>Voltar</ButtonSecondaryTitle>
                     </ButtonSecondary>
                 </ContainerInput>

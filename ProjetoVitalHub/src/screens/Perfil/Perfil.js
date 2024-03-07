@@ -80,7 +80,7 @@ export const Perfil = ({
                     </ContainerBox>
 
                     <ContainerInputButtom>
-                        <Button onPress={() => navigation.navigate("Home")}>
+                        <Button onPress={() => navigation.navigate("Main")}>
                             <ButtonTitle>Salvar</ButtonTitle>
                         </Button>
 

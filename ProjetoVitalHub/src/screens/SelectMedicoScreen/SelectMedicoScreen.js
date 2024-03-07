@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { BoxSelectMedico } from "../../components/BoxSelectMedico"
 import { ButtonModalStyle, ButtonSecondary } from "../../components/Button/style"
 import { ButtonSecondaryTitle, ButtonTitle } from "../../components/ButtonTitle/style"
@@ -5,28 +6,52 @@ import { Container, ContainerBox, Scroll } from "../../components/Container/styl
 import { TitleConsulta } from "../../components/Title/style"
 import { SelectView } from "../SelectClinic/style"
 import { ContentSelect } from "./style"
+import { ListComponent } from "../../components/List/List"
+
+const ListMedicos = [
+    { id: 1, nome: "Pedro Felix", area: "Demartologa", especializacao: "Estitca" },
+    { id: 2, nome: "Enzo Gentileza", area: "Cirurgião", especializacao: "Cardilogista" },
+    { id: 3, nome: "Gois Garbelini", area: "Clínico", especializacao: "Pediatra" },
+
+]
 
 export const SelectMedicoScreen = ({ navigation }) => {
+
+    const [selectMedico, setSelectMedico] = useState("")
+
     return (
         <Container>
             <Scroll>
-            <ContentSelect>
-                <TitleConsulta>Selecionar médico</TitleConsulta>
+                <ContentSelect>
+                    <TitleConsulta>Selecionar médico</TitleConsulta>
 
-                <SelectView marginTop={"72px"}>
-                    <BoxSelectMedico />
-                    <BoxSelectMedico />
-                    <BoxSelectMedico />
-                </SelectView>
+                    
 
-                <ButtonModalStyle onPress={() => navigation.navigate("SelectDate")}>
-                    <ButtonTitle>Continuar</ButtonTitle>
-                </ButtonModalStyle>
+                        <ListComponent
+                            data={ListMedicos}
+                            keyExtractor={(item) => item.id}
 
-                <ButtonSecondary onPress={() => navigation.replace("Home")}>
-                    <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
-                </ButtonSecondary>
-            </ContentSelect>
+                            renderItem={({ item }) =>
+                                    <BoxSelectMedico
+                                        ListMedicos={item}
+                                        situacao={item.situacao}
+                                        // clickButton={selectMedico === "medico1"}
+                                        // onPress={() => setSelectMedico("medico1")}
+                                    />
+                            }
+                            showsVerticalScrollIndicator={false}
+                        />
+
+                    
+
+                    <ButtonModalStyle onPress={() => navigation.navigate("SelectDate")}>
+                        <ButtonTitle>Continuar</ButtonTitle>
+                    </ButtonModalStyle>
+
+                    <ButtonSecondary onPress={() => navigation.replace("Main")}>
+                        <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
+                    </ButtonSecondary>
+                </ContentSelect>
             </Scroll>
         </Container>
     )

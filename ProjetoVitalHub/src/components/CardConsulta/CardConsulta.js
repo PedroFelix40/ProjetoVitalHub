@@ -6,14 +6,18 @@ import { TitleName } from "../Title/style";
 import { TextAge, TypeBold } from "../Text/style";
 
 import { AntDesign } from '@expo/vector-icons';
+import { useState } from "react";
 
 export const CardConsulta = ({
     data = [],
     situacao = 'pendente',
     onPressCancel,
     onPressAppointment,
-    onPressPerfilMed
+    onPressPerfilMed,
+    navigation
 }) => {
+    const [profile, setProfile] = useState("paciente")
+
     return (
         // Container principal
         <CardConsultaStyle onPress={onPressPerfilMed}>
@@ -50,7 +54,7 @@ export const CardConsulta = ({
                                 <ButtonText situacao={situacao}>Cancelar</ButtonText>
                             </ButtonCard>
                         ) : (
-                            <ButtonCard onPress={onPressAppointment}>
+                            <ButtonCard onPress={ profile !== "paciente" ? onPressAppointment : () => navigation.replace("Prescricao")}>
                                 <ButtonText situacao={situacao}>Ver prontuário</ButtonText>
                             </ButtonCard>
                         )

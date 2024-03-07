@@ -85,6 +85,7 @@ export const Home = ({
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
                             onPressPerfilMed={() => setShowModalPerfilMed(true)}
+                            navigation={navigation}
                         />
                     )
 

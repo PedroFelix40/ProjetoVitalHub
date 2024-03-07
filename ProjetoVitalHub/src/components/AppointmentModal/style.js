@@ -42,3 +42,6 @@ export const BoxInfosConsultas = styled.View`
     width: 90%;
     align-items: flex-start;
 `
+export const BntListConsulta = styled.TouchableHighlight`
+    
+`

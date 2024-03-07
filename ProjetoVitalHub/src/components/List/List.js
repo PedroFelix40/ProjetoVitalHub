@@ -4,4 +4,5 @@ import styled from "styled-components";
 export const ListComponent = styled(FlatList)`
     width: 100%;
     margin: 10px;
+    
 `

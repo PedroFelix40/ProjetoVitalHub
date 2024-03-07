@@ -48,14 +48,16 @@ export const ModalConsultas = ({
     setShowModalConsultas,
     navigation
 }) => {
-    const [statusLista, setStatusList] = useState("pendente");
+    const [statusLista, setStatusList] = useState("");
 
     return (
         <Modal visible={visible} transparent={true} animationType="fade">
             <ConsultaStyleModal>
                 <ConsultasContent>
 
-                    <TitleConsulta>Agendar consulta</TitleConsulta>
+                    <Title marginBottom={"17px"}>
+                        Agendar consulta
+                    </Title>
 
 
                     <Label
@@ -66,16 +68,28 @@ export const ModalConsultas = ({
                         <BtnListAppointment
                             textButton={"Rotina"}
                             fieldBorderColor="#60BFC5"
+                            fieldColor={"#34898F"}
+                            clickButton={statusLista === "rotina"}
+                            onPress={() => setStatusList("rotina")}
+                            fieldBckColor={"#60BFC5"}
                         />
 
                         <BtnListAppointment
                             textButton={"Exame"}
                             fieldBorderColor="#60BFC5"
+                            fieldColor={"#34898F"}
+                            clickButton={statusLista === "exame"}
+                            onPress={() => setStatusList("exame")}
+                            fieldBckColor={"#60BFC5"}
                         />
 
                         <BtnListAppointment
                             textButton={"Urgência"}
                             fieldBorderColor="#60BFC5"
+                            fieldColor={"#34898F"}
+                            clickButton={statusLista === "urgencia"}
+                            onPress={() => setStatusList("urgencia")}
+                            fieldBckColor={"#60BFC5"}
                         />
 
                     </BoxConsultasInput>
@@ -84,8 +98,8 @@ export const ModalConsultas = ({
                         fieldColor={"#34898F"}
                         fieldBorderColor={"#49B3BA"}
                         fieldHeight={53}
-                        textLabel='Descrição da consulta'
-                        placeholder='Descrição'
+                        textLabel='Informe a localização desejada'
+                        placeholder='Informe a localização'
                     />
 
                     <ButtonModalStyle onPress={() => navigation.navigate("SelectClinic") || setShowModalConsultas(false)}>

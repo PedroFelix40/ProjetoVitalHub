@@ -5,17 +5,24 @@ import { BoxInfosMedicos, BoxSelectMedicoStyle } from "./style"
 
 
 
-export const BoxSelectMedico = () => {
+export const BoxSelectMedico = ({
+    ListMedicos = [],
+    clickButton,
+    onPress
+}) => {
     return(
-        <BoxSelectMedicoStyle>
+        
+        <BoxSelectMedicoStyle clickButton={clickButton} onPress={onPress}>
+            <>
             <ImageUser source={{
                     uri: "https://github.com/guihenrique16.png",
                 }}/>
             <BoxInfosMedicos>
-            <TitleName>Dra. Alessandra</TitleName>
+            <TitleName>{ListMedicos.nome}</TitleName>
 
-            <Subtitle>Demartologa, Esteticista</Subtitle>
+            <Subtitle>{ListMedicos.area}, {ListMedicos.especializacao}</Subtitle>
             </BoxInfosMedicos>
+            </>
         </BoxSelectMedicoStyle>
     )
 }

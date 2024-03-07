@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const SelectContent = styled.View`
     align-items: center;
@@ -13,10 +13,13 @@ export const SelectView = styled.View`
     gap : 15px;
 `
 
-export const BoxSelectStyle = styled.TouchableOpacity`
+export const BoxSelectStyle = styled.TouchableHighlight.attrs({
+    activeOpacity: 1,
+    underlayColor: "#fff"
+})` 
     width: 90%;
     height: 84px;
-
+ 
     border-radius: 5px;
     background-color: white;
 
@@ -25,17 +28,20 @@ export const BoxSelectStyle = styled.TouchableOpacity`
 
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
 
-    ${(props) =>
-    props.clickButton &&
-    css`
-      border: 2px solid gray;
-    `}  
+    /* ${(props) =>
+        props.clickButton &&
+        css`
+      border: 2px solid #496BBA;
+    `}; */
 
-    shadow-color: gray;
-    shadow-opacity: 0.5;
-    shadow-offset: 5px 5px;
-    shadow-radius: 5px;
-    elevation: 10;
+    ${(props) => props.clickButton ? css`
+        border: 2px solid #496BBA;
+    `:
+        css`
+        border: 2px solid #fff;
+    `}
+
+
 `
 
 export const BoxDay = styled.View`

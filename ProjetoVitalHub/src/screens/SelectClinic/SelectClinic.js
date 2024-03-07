@@ -12,7 +12,7 @@ import { useState } from "react"
 export const SelectClinic = ({
     navigation
 }) => {
-    const [selectedClinic, setSelectedClinic] = useState(null);
+    const [selectedClinic, setSelectedClinic] = useState("teste");
 
     return (
         <Container>
@@ -21,17 +21,30 @@ export const SelectClinic = ({
                     <TitleConsulta>Selecionar clínica</TitleConsulta>
 
                     <SelectView>
-                        <BoxSelect />
-                        <BoxSelect />
-                        <BoxSelect />
-                        <BoxSelect />
+                        <BoxSelect
+                            clickButton={selectedClinic === "clinica1"}
+                            onPress={() => setSelectedClinic("clinica1")}
+                            />
+                        <BoxSelect
+                            clickButton={selectedClinic === 'clinica2'}
+                            onPress={() => setSelectedClinic("clinica2")}
+                            />
+                        <BoxSelect
+                            clickButton={selectedClinic === 'clinica3'}
+                            onPress={() => setSelectedClinic("clinica3")}
+                            />
+                        <BoxSelect
+                            clickButton={selectedClinic === 'clinica4'}
+                            onPress={() => setSelectedClinic("clinica4")}
+                            />
+
                     </SelectView>
 
                     <ButtonModalStyle onPress={() => navigation.navigate("SelectMedicoScreen")}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </ButtonModalStyle>
 
-                    <ButtonSecondary onPress={() => navigation.replace("Home")}>
+                    <ButtonSecondary onPress={() => navigation.replace("Main")}>
                         <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                     </ButtonSecondary>
 

@@ -8,7 +8,9 @@ import { FotoStyle } from "../../components/FotoPerfil/style"
 import { Subtitle } from "../../components/Text/style"
 import { Title } from "../../components/Title/style"
 
-export const MedicoProntuario = () => {
+export const MedicoProntuario = ({
+    navigation
+}) => {
     return (
         <Container>
             <Scroll>
@@ -54,7 +56,7 @@ export const MedicoProntuario = () => {
                         </Button>
                     </ContainerInputButtom>
 
-                    <ButtonSecondary>
+                    <ButtonSecondary onPress={() => navigation.replace("Main")}>
                         <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                     </ButtonSecondary>
                 </ContainerPerfil>
