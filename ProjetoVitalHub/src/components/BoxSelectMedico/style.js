@@ -7,7 +7,6 @@ export const BoxSelectMedicoStyle = styled.TouchableHighlight.attrs({
     width: 90%;
     height: 100px;
     /* border: 2px solid black; */
-    margin: 20px;
     
     align-items: center;
     flex-direction: row;

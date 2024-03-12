@@ -7,7 +7,14 @@ import { SelectContent, SelectView } from "./style"
 import { Container, ContainerPerfil, Scroll } from "../../components/Container/style"
 import { BoxSelect } from "../../components/BoxSelect"
 import { useState } from "react"
+import { ListComponent } from "../../components/List/List"
 
+const ListClinic = [
+    { id: 1, nome: "Clinic Natureh", estado: "SP", cidade: "SCS" },
+    { id: 2, nome: "Clinic Natureh", estado: "SP", cidade: "São Paulo" },
+    { id: 3, nome: "Clinic Natureh", estado: "SP", cidade: "São Paulo" },
+
+]
 
 export const SelectClinic = ({
     navigation
@@ -20,25 +27,26 @@ export const SelectClinic = ({
                 <SelectContent>
                     <TitleConsulta>Selecionar clínica</TitleConsulta>
 
-                    <SelectView>
-                        <BoxSelect
-                            clickButton={selectedClinic === "clinica1"}
-                            onPress={() => setSelectedClinic("clinica1")}
-                            />
-                        <BoxSelect
-                            clickButton={selectedClinic === 'clinica2'}
-                            onPress={() => setSelectedClinic("clinica2")}
-                            />
-                        <BoxSelect
-                            clickButton={selectedClinic === 'clinica3'}
-                            onPress={() => setSelectedClinic("clinica3")}
-                            />
-                        <BoxSelect
-                            clickButton={selectedClinic === 'clinica4'}
-                            onPress={() => setSelectedClinic("clinica4")}
-                            />
+                    
+                    
+                       <ListComponent
+                        data={ListClinic}
+                        keyExtractor={(item) => item.id}
 
-                    </SelectView>
+                        renderItem={({ item }) =>
+                        <SelectView>
+                            <BoxSelect
+                                ListClinic={item}
+                                situacao={item.situacao}
+                                clickButton={item.id === selectedClinic}
+                                onPress={() => setSelectedClinic(item.id)}
+                            />
+                            </SelectView>
+                        }
+                        showsVerticalScrollIndicator={false}
+                    />
+
+                    
 
                     <ButtonModalStyle onPress={() => navigation.navigate("SelectMedicoScreen")}>
                         <ButtonTitle>Continuar</ButtonTitle>

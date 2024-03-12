@@ -6,11 +6,13 @@ import { Subtitle } from "../../components/Text/style"
 import { BoxInput } from "../../components/BoxInput"
 import { ButtonModalStyle, ButtonSecondary } from "../../components/Button/style"
 import { ButtonSecondaryTitle, ButtonTitle } from "../../components/ButtonTitle/style"
+import { MapsComponente } from "../../components/MapsComponente/MapsComponente"
 
 export const Mapa = ({ navigation }) => {
     return (
         <Container>
-            <ImageMapa source={mapaImage} />
+            {/* <ImageMapa source={mapaImage} /> */}
+            <MapsComponente/>
 
             <Title marginTop={"30px"}>Clínica Natureh</Title>
             <Subtitle>São Paulo, SP</Subtitle>

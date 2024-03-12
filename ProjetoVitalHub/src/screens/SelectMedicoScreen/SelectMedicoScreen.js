@@ -25,24 +25,26 @@ export const SelectMedicoScreen = ({ navigation }) => {
                 <ContentSelect>
                     <TitleConsulta>Selecionar médico</TitleConsulta>
 
-                    
 
-                        <ListComponent
-                            data={ListMedicos}
-                            keyExtractor={(item) => item.id}
 
-                            renderItem={({ item }) =>
-                                    <BoxSelectMedico
-                                        ListMedicos={item}
-                                        situacao={item.situacao}
-                                        // clickButton={selectMedico === "medico1"}
-                                        // onPress={() => setSelectMedico("medico1")}
-                                    />
-                            }
-                            showsVerticalScrollIndicator={false}
-                        />
+                    <ListComponent
+                        data={ListMedicos}
+                        keyExtractor={(item) => item.id}
 
-                    
+                        renderItem={({ item }) =>
+                            <SelectView>
+                                <BoxSelectMedico
+                                    ListMedicos={item}
+                                    situacao={item.situacao}
+                                    clickButton={item.id === selectMedico}
+                                    onPress={() => setSelectMedico(item.id)}
+                                />
+                            </SelectView>
+                        }
+                        showsVerticalScrollIndicator={false}
+                    />
+
+
 
                     <ButtonModalStyle onPress={() => navigation.navigate("SelectDate")}>
                         <ButtonTitle>Continuar</ButtonTitle>
