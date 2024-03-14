@@ -49,7 +49,7 @@ export const Prescricao = ({
 
                     <ContainerBoxPrescricao>
 
-                        <Button fieldGap={"10px"} fieldWidth={"54%"} fieldHeight={"44px"}>
+                        <Button fieldGap={"10px"} fieldWidth={"54%"} fieldHeight={"44px"} onPress={() => setCamera(true)}>
                             <MaterialCommunityIcons name="camera-plus-outline" size={20} color="#fff" />
                             <ButtonTitle>Enviar</ButtonTitle>
                         </Button>
