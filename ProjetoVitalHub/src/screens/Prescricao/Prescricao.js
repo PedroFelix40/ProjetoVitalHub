@@ -8,10 +8,21 @@ import { Title } from "../../components/Title/style"
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { ContainerBoxPrescricao, Linha } from "./style"
+import { CameraComp } from "../../components/CameraComp/CameraComp"
+
+//Componente nativo
+import { useState } from "react"
+import { Image, StyleSheet } from "react-native"
+import { Label } from "../../components/Label"
 
 export const Prescricao = ({
     navigation
 }) => {
+
+    const [showCamera, setShowCamera] = useState(false)
+    const [photoPrescicao, setPhotoPrescicao] = useState(null)
+
+
     return (
         <Container>
             <Scroll>
@@ -38,18 +49,27 @@ export const Prescricao = ({
                         fieldHeight={"133"}
                     />
 
-                    <BoxInput
-                        textLabel={"Exames médicos"}
-                        placeholder={"                  Nenhuma foto informada"}
-                        fieldHeight={"111"}
-                    >
-                        <MaterialCommunityIcons name="camera-plus-outline" size={20} color="#fff" />
-                    </BoxInput>
-
+                    {
+                        photoPrescicao == null ? (
+                            <BoxInput
+                                textLabel={"Exames médicos"}
+                                placeholder={"                  Nenhuma foto informada"}
+                                fieldHeight={"111"}
+                            >
+                            </BoxInput>
+                        ) : (
+                            <>
+                            <Label
+                                textLabel={"Exames médicos"}
+                            />
+                            <Image style={styles.imageStyle} source={{ uri: photoPrescicao }} />
+                            </>
+                        )
+                    }
 
                     <ContainerBoxPrescricao>
 
-                        <Button fieldGap={"10px"} fieldWidth={"54%"} fieldHeight={"44px"} onPress={() => setCamera(true)}>
+                        <Button fieldGap={"10px"} fieldWidth={"54%"} fieldHeight={"44px"} onPress={() => setShowCamera(true)}>
                             <MaterialCommunityIcons name="camera-plus-outline" size={20} color="#fff" />
                             <ButtonTitle>Enviar</ButtonTitle>
                         </Button>
@@ -59,7 +79,7 @@ export const Prescricao = ({
 
                     </ContainerBoxPrescricao>
 
-                    <Linha/>
+                    <Linha />
 
                     <BoxInput
                         textLabel={"Exames médicos"}
@@ -73,7 +93,21 @@ export const Prescricao = ({
                 </ContainerInput>
 
 
+                <CameraComp
+                    visible={showCamera}
+                    setShowCamera={setShowCamera}
+                    setPhotoPrescicao={setPhotoPrescicao}
+                />
+
             </Scroll>
         </Container>
     )
 }
+
+const styles = StyleSheet.create({
+    imageStyle: {
+        height: 110,
+        width: '90%',
+        borderRadius: 15
+    }
+})

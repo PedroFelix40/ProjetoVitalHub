@@ -45,7 +45,7 @@ export const CardConsulta = ({
 
                     {/* Botão Cancelar ou ver prontuário */}
 
-                    {
+                    { 
                         situacao == "cancelado" ? (
                             <>
                             </>
