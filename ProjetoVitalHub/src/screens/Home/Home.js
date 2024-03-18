@@ -9,6 +9,7 @@ import { ListComponent } from "../../components/List/List"
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal"
 import { AppointmentModal, ModalConsultas, ModalPerfilMed } from "../../components/AppointmentModal/AppointmentModal"
 import { ButtonAppointment } from "../../components/ButtonAppointment"
+import { handleCallNotifications } from "../../components/Notification/Notification"
 
 const Consultas = [
     { id: 1, nome: "Pedro Felix", idade: "20", typeExame: "Rotina", horario: "16h",  situacao: "pendente" },
@@ -96,6 +97,10 @@ export const Home = ({
             <CancellationModal
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
+                ClosedModal={() => {
+                    handleCallNotifications()
+                    setShowModalCancel(false)
+                }}
             />
 
             {/* modal ver protuário */}

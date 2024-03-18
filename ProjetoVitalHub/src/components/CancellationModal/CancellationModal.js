@@ -4,12 +4,17 @@ import { LinkUtil } from "../Text/style"
 import { ModalContent, ModalText, PatientModal } from "./style"
 import { ButtonModal, ButtonSecondary } from "../Button/style"
 import { ButtonSecondaryTitle, ButtonTitle } from "../ButtonTitle/style"
+import { handleCallNotifications } from "../Notification/Notification"
+
+
 
 export const CancellationModal = ({
     visible,
     setShowModalCancel,
+    ClosedModal,
     ...rest
 }) => {
+
     return(
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
             {/* Container */}
@@ -23,11 +28,11 @@ export const CancellationModal = ({
                     Ao cancelar essa consulta, abrirá uma possível disponibilidade no seu horário, deseja mesmo cancelar essa consulta?
                     </ModalText>
 
-                    <ButtonModal>
+                    <ButtonModal onPress={() => ClosedModal()}>
                         <ButtonTitle>Confirmar</ButtonTitle>
                     </ButtonModal>
 
-                    <ButtonSecondary onPress={() => setShowModalCancel(false)}>
+                    <ButtonSecondary onPress={() => setShowModalCancel(false) }>
                         <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                     </ButtonSecondary>
                 </ModalContent>

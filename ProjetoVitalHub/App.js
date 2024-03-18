@@ -37,7 +37,6 @@ import { Prescricao } from './src/screens/Prescricao/Prescricao';
 import { Main } from './src/screens/Main/Main';
 
 
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
